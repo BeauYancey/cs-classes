@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Analysis",
+    "description": "Analyze a complex computing problem and to apply principles of computing and other relevant disciplines to identify solutions.",
+    "courses": [
+      "CS 111", "CS 142", "CS 180", "CS 201R", "CS 203", "CS 204", "CS 224", "CS 235", "CS 236", "CS252", "CS 256", "CS 260", "CS 301R", "CS 312",
+      "CS 324", "CS 329", "CS 330", "CS 340", "CS 345", "CS 355", "CS 393", "CS 404", "CS 412", "CS 431", "CS 450", "CS 452", "CS 453", "CS 460",
+      "CS 462", "CS 465", "CS 466", "CS 470", "CS 472", "CS 474", "CS 479", "CS 480", "CS 481", "CS 482", "CS 483", "CS 486", "CS 492R", "CS 493R", 
+      "CS 494", "CS 495", "CS 497R", "CS 500", "CS 513", "CS 575", "CS 618", "CS 653", "CS 655", "CS 656", "CS 670", "CS 673", "CS 676", "CS 677", 
+      "CS 678", "CS 686", "CS 712R", "CS 765R"
+    ]
+  },
+  {
+    "title": "Design",
+    "description": "Design, implement, and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program's discipline.",
+    "courses": [
+      "CS 111", "CS 180", "CS 201R", "CS 202", "CS 203", "CS 204", "CS 224", "CS 235", "CS 236", "CS252", "CS 260", "CS 301R", "CS 312", "CS 329", 
+      "CS 330", "CS 340", "CS 345", "CS 356", "CS 393", "CS 412", "CS 428", "CS 431", "CS 450", "CS 452", "CS 453", "CS 455", "CS 460", "CS 470", 
+      "CS 472", "CS 474", "CS 480", "CS 481", "CS 482", "CS 483", "CS 486", "CS 493R", "CS 494", "CS 495", "CS 497R", "CS 513", "CS 575", "CS 611", 
+      "CS 660", "CS 670", "CS 686", "CS 765R"
+    ]
+  },
+  {
+    "title": "Teamwork",
+    "description": "Function effectively as a member or leader of a team engaged in activities appropriate to the program's discipline.",
+    "courses": [
+      "CS 111", "CS 202", "CS 329", "CS 340", "CS 428", "CS 480", "CS 481", "CS 481", "CS 482", "CS 483", "CS 493R", "CS 494", "CS 495", "CS 497R"
+    ]
+  },
+  {
+    "title": "Ethics",
+    "description": "Recognize professional responsibilities and make informed judgments in computing practice based on legal and ethical principles.",
+    "courses": ["CS 329", "CS 404", "CS 428", "CS 462"]
+  },
+  {
+    "title": "Communication",
+    "description": "Communicate effectively in a variety of professional contexts.",
+    "courses": [
+      "CS 256", "CS 329", "CS 404", "CS 405", "CS 460", "CS 462", "CS 470", "CS 480", "CS 481", "CS 481", "CS 482", "CS 483", "CS 494", "CS 495"
+    ]
+  },
+  {
+    "title": "Implementation",
+    "description": "Apply computer science theory and software development fundamentals to produce computing-based solutions.",
+    "courses": [
+      "CS 111", "CS 180", "CS 202", "CS 204", "CS 224", "CS 235", "CS 236", "CS 260", "CS 301R", "CS 312", "CS 324", "CS 329", "CS 393", "CS 431", 
+      "CS 450", "CS 452", "CS 456", "CS 460", "CS 462", "CS 465", "CS 466", "CS 470", "CS 471", "CS 472", "CS 474", "CS 479", "CS 480", "CS 481", 
+      "CS 482", "CS 483", "CS 493R", "CS 494", "CS 495", "CS 497R", "CS 575"
+    ]
+  }
+]
