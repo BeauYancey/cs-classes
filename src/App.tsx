@@ -1,34 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Tabs, Title, Text, Group, useMantineTheme } from "@mantine/core"
+import { GraduationCapIcon, PathIcon, ChalkboardSimpleIcon, TargetIcon } from "@phosphor-icons/react"
+import { useEffect, useState } from "react"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activeTab, setActiveTab] = useState<string | null>("courses")
+  const theme = useMantineTheme();
+
+  useEffect(() => {
+    console.log(activeTab)
+  }, [activeTab])
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <main>
+      <Title order={1} mb="md">BYU Computer Science Department</Title>
+
+      <Tabs value={activeTab} onChange={setActiveTab}>
+        <Tabs.List mb="md">
+          <Tabs.Tab value="courses" bg={activeTab === "courses" ? theme.colors.royal[0] : undefined}><Group gap="xs">
+            <ChalkboardSimpleIcon size={22} />
+            <Title order={4}>Courses</Title>    
+          </Group></Tabs.Tab>
+
+          <Tabs.Tab value="programs" bg={activeTab === "programs" ? theme.colors.royal[0] : undefined}><Group gap="xs">
+            <PathIcon size={22} />
+            <Title order={4}>Programs</Title>
+          </Group></Tabs.Tab>
+
+          <Tabs.Tab value="grad-plan" bg={activeTab === "grad-plan" ? theme.colors.royal[0] : undefined}><Group gap="xs">
+            <GraduationCapIcon size={22} />
+            <Title order={4}>Graduation Plan</Title>
+          </Group></Tabs.Tab>
+
+          <Tabs.Tab value="outcomes" bg={activeTab === "outcomes" ? theme.colors.royal[0] : undefined}><Group gap="xs">
+            <TargetIcon size={22} />
+            <Title order={4}>Learning Outcomes</Title>
+          </Group></Tabs.Tab>
+        </Tabs.List>
+
+        <Tabs.Panel value="courses">
+          <Text>Courses Page</Text>
+        </Tabs.Panel>
+
+        <Tabs.Panel value="programs">
+          {/* Add page components here */}
+          <Text>Programs Page</Text>
+        </Tabs.Panel>
+
+        <Tabs.Panel value="grad-plan">
+          <Text>Graduation Plan</Text>
+        </Tabs.Panel>
+
+        <Tabs.Panel value="outcomes">
+          <Text>Learning Outcomes Page</Text>
+        </Tabs.Panel>
+      </Tabs>
+    </main>
   )
 }
 
