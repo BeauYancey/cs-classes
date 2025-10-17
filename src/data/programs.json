@@ -107,7 +107,7 @@
             "creditsMin": 0,
             "creditsMax": 6,
             "courses": [
-              {"code": "CS 180", "title": "Intro to Data Science", "credits": 4},
+              {"code": "CS 180", "title": "Intro to Data Science", "credits": 3},
               {"code": "CS 202", "title": "Software Engineering Lab I", "credits": 1},
               {"code": "CS 203", "title": "Software Engineering Lab II", "credits": 1},
               {"code": "CS 204", "title": "Software Engineering Lab III", "credits": 1},
@@ -365,44 +365,663 @@
   },
   {
     "name": "Computer Science (BS): Bioinformatics Emphasis",
-    "requirements": [],
+    "requirements": [
+      {
+        "title": "Requirement 1 - Complete 10 Courses",
+        "description": "Computer Science Core",
+        "creditsMin": 25,
+        "creditsMax": 25,
+        "courses": [
+          {"code": "CS 111", "title": "Intro to Computer Science", "credits": 3},
+          {"code": "CS 191", "title": "Exploring CS", "credits": 0.5},
+          {"code": "CS 224", "title": "Computer Systems", "credits": 3},
+          {"code": "CS 235", "title": "Data Structures", "credits": 3},
+          {"code": "CS 236", "title": "Discrete Structures", "credits": 3},
+          {"code": "CS 240", "title": "Adv Software Construction", "credits": 4},
+          {"code": "CS 270", "title": "Intro to Machine Learning", "credits": 3},
+          {"code": "CS 291", "title": "Careers in CS", "credits": 0.5},
+          {"code": "CS 312", "title": "Algorithm Design & Analysis", "credits": 3},
+          {"code": "CS 404", "title": "Ethics & Computers in Society", "credits": 2}
+        ]
+      },
+      {
+        "title": "Requirement 2 — Complete 7 Courses",
+        "description": "Biology Core",
+        "creditsMin": 23,
+        "creditsMax": 23,
+        "courses": [
+          {"code": "BIO 130", "title": "Biology", "credits": 4},
+          {"code": "BIO 165", "title": "Introduction to Bioinformatics", "credits": 3},
+          {"code": "BIO 264", "title": "Stat Analysis for Biologists", "credits": 4},
+          {"code": "BIO 364", "title": "Bioinformatics Algorithms", "credits": 3},
+          {"code": "BIO 465", "title": "Capstone in Bioinformatics", "credits": 3},
+          {"code": "MMBIO 240", "title": "Molecular Biology", "credits": 3},
+          {"code": "PWS 340 ", "title": "Genetics", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 3 — Complete 5 Courses",
+        "description": "Supporting Courses",
+        "creditsMin": 14,
+        "creditsMax": 14,
+        "courses": [
+          {"code": "CHEM 105", "title": "Gen College Chem 1+Lab Integr", "credits": 4},
+          {"code": "MATH 112", "title": "Calculus I", "credits": 4},
+          {"code": "MATH 213", "title": "Elementary Linear Algebra", "credits": 2},
+          {"code": "MATH 215", "title": "Computational Linear Algebra", "credits": 1},
+          {"code": "WRTG 316", "title": "Technical Communication", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 4 - Complete 1 of 2 Courses",
+        "creditsMin": 2,
+        "creditsMax": 4,
+        "courses": [
+          {"code": "BIO 250", "title": "Evolutionary Medicine", "credits": 2},
+          {"code": "BIO 420", "title": "Evolutionary Biology", "credits": 4}
+        ]
+      },
+      {
+        "title": "Requirement 5 - Complete 1 of 2 Courses",
+        "creditsMin": 3,
+        "creditsMax": 3,
+        "courses": [
+          {"code": "CS 473", "title": "Advanced Machine Learning", "credits": 3},
+          {"code": "CS 474", "title": "Deep Learning", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 6 — Complete 12 hours",
+        "description": "Courses will not double count between Requirement 5 and Requirement 6.",
+        "creditsMin": 12,
+        "creditsMax": 12,
+        "options": [
+          {
+            "title": "Complete at least 6 hours up to 12 hours",
+            "description": "Complete up to 12 hours from the following courses",
+            "creditsMin": 6,
+            "creditsMax": 12,
+            "courses": [
+              {"code": "BIO 463", "title": "Genetics of Human Disease", "credits": 3},
+              {"code": "CS 256", "title": "Introduction to HCI", "credits": 3},
+              {"code": "CS 260", "title": "Web Programming", "credits": 3},
+              {"code": "CS 329", "title": "QA & DevOps", "credits": 3},
+              {"code": "CS 330", "title": "Operating Systems Design", "credits": 3},
+              {"code": "CS 340", "title": "Software Design", "credits": 3},
+              {"code": "CS 345", "title": "Operating Systems Design", "credits": 3},
+              {"code": "CS 355", "title": "Graphics and Image Processing", "credits": 3},
+              {"code": "CS 356", "title": "Advanced Techniques in HCI", "credits": 3},
+              {"code": "CS 393", "title": "Collaborative Probl Solving", "credits": 3},
+              {"code": "CS 401R", "title": "Topics in Computer Science", "credits": 3},
+              {"code": "CS 412", "title": "Linear Prog/Convx Optimization", "credits": 3},
+              {"code": "CS 416", "title": "Advanced Algorithms", "credits": 3},
+              {"code": "CS 428", "title": "Software Engineering", "credits": 3},
+              {"code": "CS 430", "title": "Formal Verification", "credits": 3},
+              {"code": "CS 431", "title": "Algorithmic Lang & Compilers", "credits": 3},
+              {"code": "CS 450", "title": "Computer Vision", "credits": 3},
+              {"code": "CS 452", "title": "Database Modeling Concepts", "credits": 3},
+              {"code": "CS 453", "title": "Fund of Information Retrieval", "credits": 3},
+              {"code": "CS 455", "title": "Computer Graphics", "credits": 3},
+              {"code": "CS 456", "title": "Mobile and Ubiquitous HCI", "credits": 3},
+              {"code": "CS 460", "title": "Comp Comms & Networking", "credits": 3},
+              {"code": "CS 462", "title": "Distributed System Design", "credits": 3},
+              {"code": "CS 465", "title": "Computer Security", "credits": 3},
+              {"code": "CS 466", "title": "Blockchain Technologies", "credits": 3},
+              {"code": "CS 470", "title": "Intro Artificial Intelligence", "credits": 3},
+              {"code": "CS 471", "title": "Voice Interfaces", "credits": 3},
+              {"code": "CS 473", "title": "Advanced Machine Learning", "credits": 3},
+              {"code": "CS 474", "title": "Deep Learning", "credits": 3},
+              {"code": "CS 479", "title": "Intro to Machine Translation", "credits": 3},
+              {"code": "CS 480", "title": "Soft Eng Capstone I", "credits": 3},
+              {"code": "CS 481", "title": "Soft Eng Capstone II", "credits": 3},
+              {"code": "CS 482", "title": "Data Science Capstone I", "credits": 3},
+              {"code": "CS 483", "title": "Data Science Capstone II", "credits": 3},
+              {"code": "CS 493R", "title": "Computing Competitions", "credits": 3},
+              {"code": "CS 513", "title": "Robust Control", "credits": 3},
+              {"code": "CS 556", "title": "Inter Soft Systems", "credits": 3},
+              {"code": "CS 574", "title": "Transformers for NLP", "credits": 3},
+              {"code": "CS 575", "title": "Intro to Network Science", "credits": 3},
+              {"code": "CS 580", "title": "Theory of Predictive Modeling", "credits": 3}
+            ]
+          },
+          {
+            "title": "Option 6.2 — Complete up to 6 hours",
+            "creditsMin": 0,
+            "creditsMax": 6,
+            "courses": [
+              {"code": "CS 497R", "title": "Undergraduate Research", "credits": 3},
+              {"code": "CS 498R", "title": "Undergraduate Special Projects", "credits": 3}
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Requirement 7 — Complete Senior Exit Interview with the CS department during your last semester or term",
+        "creditsMin": 0,
+        "creditsMax": 0
+      }
+    ],
     "creditsMin": 79,
     "creditsMax": 81,
     "type": "major"
   },
   {
     "name": "Computer Science (BS): Human-Computer Interaction Emphasis",
-    "requirements": [],
+    "requirements": [
+      {
+        "title": "Requirement 1 - Complete 9 Courses",
+        "creditsMin": 24,
+        "creditsMax": 24,
+        "courses": [
+          {"code": "CS 111", "title": "Intro to Computer Science", "credits": 3},
+          {"code": "CS 224", "title": "Computer Systems", "credits": 3},
+          {"code": "CS 235", "title": "Data Structures", "credits": 3},
+          {"code": "CS 236", "title": "Discrete Structures", "credits": 3},
+          {"code": "CS 240", "title": "Adv Software Construction", "credits": 4},
+          {"code": "CS 260", "title": "Web Programming", "credits": 3},
+          {"code": "CS 312", "title": "Algorithm Design & Analysis", "credits": 3},
+          {"code": "CS 340", "title": "Software Design", "credits": 3},
+          {"code": "CS 404", "title": "Ethics & Computers in Society", "credits": 2}
+        ]
+      },
+      {
+        "title": "Requirement 2 - Complete 5 Courses",
+        "creditsMin": 13,
+        "creditsMax": 13,
+        "courses": [
+          {"code": "MATH 112", "title": "Calculus I", "credits": 4},
+          {"code": "MATH 213", "title": "Elementary Linear Algebra", "credits": 2},
+          {"code": "MATH 215", "title": "Computational Linear Algebra", "credits": 1},
+          {"code": "PHSCS 121", "title": "Intro to Newtonian Mechanics", "credits": 3},
+          {"code": "WRTG 316", "title": "Technical Communication", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 3 - Complete 1 of 2 Courses",
+        "creditsMin": 3,
+        "creditsMax": 3,
+        "courses": [
+          {"code": "STAT 121", "title": "Intro to Stat Data Analysis", "credits": 3},
+          {"code": "STAT 201", "title": "Stat for Engineers & Scientist", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 4 - Complete 1 of 3 Courses",
+        "creditsMin": 3,
+        "creditsMax": 4,
+        "courses": [
+          {"code": "MATH 113", "title": "Calculus II", "credits": 4},
+          {"code": "MATH 290", "title": "Fundamentals of Mathematics", "credits": 3},
+          {"code": "STAT 220", "title": "Stat Modeling for Data Science", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 5 — Complete 3 Courses",
+        "creditsMin": 9,
+        "creditsMax": 9,
+        "courses": [
+          {"code": "CS 256", "title": "Introduction to HCI", "credits": 3},
+          {"code": "CS 356", "title": "Advanced Techniques in HCI", "credits": 3},
+          {"code": "CS 456", "title": "Mobile and Ubiquitous HCI", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 6 — Complete 1 of 4 Courses",
+        "creditsMin": 3,
+        "creditsMax": 3,
+        "courses": [
+          {"code": "ANTHR 101", "title": "Social/Cultural Anthropology", "credits": 3},
+          {"code": "COMMS 101", "title": "Mass Comm & Soc", "credits": 3},
+          {"code": "PSYCH 111", "title": "Psychological Science", "credits": 3},
+          {"code": "SOC 111", "title": "Introductory Sociology", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 7 — Complete 1 of 2 Courses",
+        "creditsMin": 3,
+        "creditsMax": 3,
+        "courses": [
+          {"code": "EXDM 300", "title": "Creating a Good Life", "credits": 3},
+          {"code": "STAT 220", "title": "Statistical Modeling I", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 8 — Complete 12 hours",
+        "creditsMin": 12,
+        "creditsMax": 12,
+        "options": [
+          {
+            "title": "Option 8.1 - Complete up to 12 hours",
+            "creditsMin": 0,
+            "creditsMax": 12,
+            "courses": [
+              {"code": "CS 252", "title": "Intro to Computational Theory", "credits": 3},
+
+              {"code": "CS 260", "title": "Web Programming", "credits": 3},
+              {"code": "CS 324", "title": "Systems Programming", "credits": 3},
+              {"code": "CS 329", "title": "QA & DevOps", "credits": 3},
+              {"code": "CS 330", "title": "Operating Systems Design", "credits": 3},
+              {"code": "CS 340", "title": "Software Design", "credits": 3},
+              {"code": "CS 345", "title": "Operating Systems Design", "credits": 3},
+              {"code": "CS 355", "title": "Graphics and Image Processing", "credits": 3},
+              {"code": "CS 393", "title": "Collaborative Probl Solving", "credits": 3},
+              {"code": "CS 401R", "title": "Topics in Computer Science", "credits": 3},
+              {"code": "CS 412", "title": "Linear Prog/Convx Optimization", "credits": 3},
+              {"code": "CS 428", "title": "Software Engineering", "credits": 3},
+              {"code": "CS 431", "title": "Algorithmic Lang & Compilers", "credits": 3},
+              {"code": "CS 450", "title": "Computer Vision", "credits": 3},
+              {"code": "CS 452", "title": "Database Modeling Concepts", "credits": 3},
+              {"code": "CS 453", "title": "Fund of Information Retrieval", "credits": 3},
+              {"code": "CS 455", "title": "Computer Graphics", "credits": 3},
+              {"code": "CS 460", "title": "Comp Comms & Networking", "credits": 3},
+              {"code": "CS 462", "title": "Distributed System Design", "credits": 3},
+              {"code": "CS 465", "title": "Computer Security", "credits": 3},
+              {"code": "CS 466", "title": "Blockchain Technologies", "credits": 3},
+              {"code": "CS 470", "title": "Intro Artificial Intelligence", "credits": 3},
+              {"code": "CS 471", "title": "Voice Interfaces", "credits": 3},
+              {"code": "CS 474", "title": "Deep Learning", "credits": 3},
+              {"code": "CS 479", "title": "Intro to Machine Translation", "credits": 3},
+              {"code": "CS 486", "title": "Verification and Validation", "credits": 3},
+              {"code": "CS 501R", "title": "Adv Topics in Computer Sci", "credits": 3},
+              {"code": "CS 513", "title": "Robust Control", "credits": 3},
+              {"code": "CS 575", "title": "Intro to Network Science", "credits": 3},
+              {"code": "CS 580", "title": "Theory of Predictive Modeling", "credits": 3}
+            ]
+          },
+          {
+            "title": "Option 8.2 - Complete up to 3 hours",
+            "creditsMin": 0,
+            "creditsMax": 3,
+            "courses": [
+              {"code": "CS 493R", "title": "Computing Competitions", "credits": 3},
+              {"code": "CS 497R", "title": "Undergraduate Research", "credits": 3},
+              {"code": "CS 498R", "title": "Undergraduate Special Projects", "credits": 3}
+            ]
+          }
+        ]
+      }
+    ],
     "creditsMin": 73,
     "creditsMax": 74,
     "type": "major"
   },
   {
     "name": "Computer Science (BS): Software Engineering Emphasis",
-    "requirements": [],
+    "requirements": [
+      {
+        "title": "Requirement 1 — Complete 19 Courses",
+        "description": "Core Courses",
+        "creditsMin": 59,
+        "creditsMax": 59,
+        "courses": [
+          {"code": "CS 111", "title": "Intro to Computer Science", "credits": 3},
+          {"code": "CS 191", "title": "Exploring CS", "credits": 0.5},
+          {"code": "CS 202", "title": "Software Engineering Lab I", "credits": 1},
+          {"code": "CS 203", "title": "Software Engineering Lab II", "credits": 1},
+          {"code": "CS 204", "title": "Software Engineering Lab III", "credits": 1},
+          {"code": "CS 224", "title": "Computer Systems", "credits": 3},
+          {"code": "CS 235", "title": "Data Structures", "credits": 3},
+          {"code": "CS 236", "title": "Discrete Structures", "credits": 3},
+          {"code": "CS 240", "title": "Adv Software Construction", "credits": 4},
+          {"code": "CS 260", "title": "Web Programming", "credits": 3},
+          {"code": "CS 291", "title": "Careers in CS", "credits": 0.5},
+          {"code": "CS 312", "title": "Algorithm Design & Analysis", "credits": 3},
+          {"code": "CS 324", "title": "Systems Programming", "credits": 3},
+          {"code": "CS 329", "title": "QA & DevOps", "credits": 3},
+          {"code": "CS 340", "title": "Software Design", "credits": 3},
+          {"code": "CS 404", "title": "Ethics & Computers in Society", "credits": 2},
+          {"code": "CS 452", "title": "Database Modeling Concepts", "credits": 3},
+          {"code": "CS 480", "title": "Soft Eng Capstone I", "credits": 3},
+          {"code": "CS 481", "title": "Soft Eng Capstone II", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 2 — Complete 5 Courses",
+        "creditsMin": 13,
+        "creditsMax": 13,
+        "courses": [
+          {"code": "MATH 112", "title": "Calculus I", "credits": 4},
+          {"code": "MATH 213", "title": "Elementary Linear Algebra", "credits": 2},
+          {"code": "MATH 215", "title": "Computational Linear Algebra", "credits": 1},
+          {"code": "PHSCS 121", "title": "Intro to Newtonian Mechanics", "credits": 3},
+          {"code": "WRTG 316", "title": "Technical Communication", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 3 — Complete 1 of 2 Courses",
+        "creditsMin": 3,
+        "creditsMax": 3,
+        "courses": [
+          {"code": "STAT 121", "title": "Intro to Stat Data Analysis", "credits": 3},
+          {"code": "STAT 201", "title": "Stat for Engineers & Scientist", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 4 — Complete 1 of 3 Courses",
+        "creditsMin": 3,
+        "creditsMax": 4,
+        "courses": [
+          {"code": "MATH 113", "title": "Calculus II", "credits": 4},
+          {"code": "MATH 290", "title": "Fundamentals of Mathematics", "credits": 3},
+          {"code": "STAT 220", "title": "Stat Modeling for Data Science", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 5 — Complete 2 of 11 Courses",
+        "creditsMin": 6,
+        "creditsMax": 6,
+        "courses": [
+          {"code": "CS 256", "title": "Introduction to HCI", "credits": 3},
+          {"code": "CS 270", "title": "Intro to Machine Learning", "credits": 3},
+          {"code": "CS 330", "title": "Concepts of Programming Lang", "credits": 3},
+          {"code": "CS 345", "title": "Operating Systems Design", "credits": 3},
+          {"code": "CS 356", "title": "Advanced Techniques in HCI", "credits": 3},
+          {"code": "CS 453", "title": "Fund of Information Retrieval", "credits": 3},
+          {"code": "CS 465", "title": "Computer Security", "credits": 3},
+          {"code": "CS 460", "title": "Comp Comms & Networking", "credits": 3},
+          {"code": "CS 462", "title": "Distributed System Design", "credits": 3},
+          {"code": "CS 465", "title": "Computer Security", "credits": 3},
+          {"code": "CS 473", "title": "Advanced Machine Learning", "credits": 3},
+          {"code": "CS 486", "title": "Verification and Validation", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 6 — Complete 3 hours",
+        "creditsMin": 3,
+        "creditsMax": 4,
+        "courses": [
+          {"code": "CS 252", "title": "Intro to Computational Theory", "credits": 3},
+          {"code": "CS 256", "title": "Introduction to HCI", "credits": 3},
+          {"code": "CS 270", "title": "Intro to Machine Learning", "credits": 3},
+          {"code": "CS 330", "title": "Concepts of Programming Lang", "credits": 3},
+          {"code": "CS 345", "title": "Operating Systems Design", "credits": 3},
+          {"code": "CS 355", "title": "Graphics and Image Processing", "credits": 3},
+          {"code": "CS 356", "title": "Advanced Techniques in HCI", "credits": 3},
+          {"code": "CS 393", "title": "Collaborative Probl Solving", "credits": 3},
+          {"code": "CS 401R", "title": "Topics in Computer Science", "credits": 3},
+          {"code": "CS 405", "title": "Software Business", "credits": 3},
+          {"code": "CS 412", "title": "Linear Prog/Convx Optimization", "credits": 3},
+          {"code": "CS 416", "title": "Advanced Algorithms", "credits": 3},
+          {"code": "CS 430", "title": "Formal Verification", "credits": 3},
+          {"code": "CS 450", "title": "Computer Vision", "credits": 3},
+          {"code": "CS 453", "title": "Fund of Information Retrieval", "credits": 3},
+          {"code": "CS 455", "title": "Computer Graphics", "credits": 3},
+          {"code": "CS 456", "title": "Mobile and Ubiquitous HCI", "credits": 3},
+          {"code": "CS 460", "title": "Comp Comms & Networking", "credits": 3},
+          {"code": "CS 462", "title": "Distributed System Design", "credits": 3},
+          {"code": "CS 465", "title": "Computer Security", "credits": 3},
+          {"code": "CS 466", "title": "Blockchain Technologies", "credits": 3},
+          {"code": "CS 470", "title": "Intro Artificial Intelligence", "credits": 3},
+          {"code": "CS 471", "title": "Voice Interfaces", "credits": 3},
+          {"code": "CS 473", "title": "Advanced Machine Learning", "credits": 3},
+          {"code": "CS 474", "title": "Deep Learning", "credits": 3},
+          {"code": "CS 479", "title": "Intro to Machine Translation", "credits": 3},
+          {"code": "CS 486", "title": "Verification and Validation", "credits": 3},
+          {"code": "CS 501R", "title": "Adv Topics in Computer Sci", "credits": 3},
+          {"code": "CS 513", "title": "Robust Control", "credits": 3},
+          {"code": "CS 556", "title": "Inter Soft Systems", "credits": 3},
+          {"code": "CS 574", "title": "Transformers for NLP", "credits": 3},
+          {"code": "CS 575", "title": "Intro to Network Science", "credits": 3},
+          {"code": "CS 580", "title": "Theory of Predictive Modeling", "credits": 3},
+          {"code": "EC EN 424", "title": "Computer Systems", "credits": 4},
+          {"code": "EC EN 425", "title": "Real-Time Operating Systems", "credits": 4},
+          {"code": "IT&C 567", "title": "Cybersecurity & Pen Test", "credits": 3},
+          {"code": "MATH 411", "title": "Numerical Methods", "credits": 3},
+          {"code": "MATH 431", "title": "Probability Theory", "credits": 3},
+          {"code": "MATH 485", "title": "Mathematical Cryptography", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 7 — Complete Senior Exit Interview with the CS department during your last semester or term",
+        "creditsMin": 0,
+        "creditsMax": 0
+      }
+    ],
     "creditsMin": 74,
     "creditsMax": 76,
     "type": "major"
   },
   {
     "name": "Computer Science (Minor)",
-    "requiredCourses": ["CS 111", "CS 235", "CS 236", "CS 240"],
-    "electiveCourses": [],
+    "requirements": [
+      {
+        "title": "Requirement 1 — Complete 4 Courses",
+        "creditsMin": 13,
+        "creditsMax": 13,
+        "courses": [
+          {"code": "CS 111", "title": "Intro to Computer Science", "credits": 3},
+          {"code": "CS 235", "title": "Data Structures", "credits": 3},
+          {"code": "CS 236", "title": "Discrete Structures", "credits": 3},
+          {"code": "CS 240", "title": "Adv Software Construction", "credits": 4}
+        ]
+      },
+      {
+        "title": "Requirement 2 — Complete 6 hours",
+        "description": "Complete a total of 2 courses (6.0 credit hours) from the following groups.",
+        "creditsMin": 6,
+        "creditsMax": 6,
+        "options": [
+          {
+            "title": "Option 2.1 — Complete at least 3 hours up to 6 hours",
+            "description": "Complete 1-2 elective courses (3-6 credit hours) from the following list",
+            "creditsMin": 3,
+            "creditsMax": 6,
+            "courses": [
+              {"code": "CS 180", "title": "Intro to Data Science", "credits": 3},
+              {"code": "CS 201R", "title": "Topics in Computer Science", "credits": 3},
+              {"code": "CS 252", "title": "Intro to Computational Theory", "credits": 3},
+              {"code": "CS 256", "title": "Introduction to HCI", "credits": 3},
+              {"code": "CS 260", "title": "Web Programming", "credits": 3},
+              {"code": "CS 270", "title": "Intro to Machine Learning", "credits": 3},
+              {"code": "CS 301R", "title": "Topics in Computer Science", "credits": 3},
+              {"code": "CS 312", "title": "Algorithm Design & Analysis", "credits": 3},
+              {"code": "CS 324", "title": "Systems Programming", "credits": 3},
+              {"code": "CS 329", "title": "QA & DevOps", "credits": 3},
+              {"code": "CS 330", "title": "Concepts of Programming Lang", "credits": 3},
+              {"code": "CS 345", "title": "Operating Systems Design", "credits": 3},
+              {"code": "CS 355", "title": "Graphics and Image Processing", "credits": 3},
+              {"code": "CS 356", "title": "Advanced Techniques in HCI", "credits": 3},
+              {"code": "CS 393", "title": "Collaborative Probl Solving", "credits": 3},
+              {"code": "CS 401R", "title": "Topics in Computer Science", "credits": 3},
+              {"code": "CS 412", "title": "Linear Prog/Convx Optimization", "credits": 3},
+              {"code": "CS 416", "title": "Advanced Algorithms", "credits": 3},
+              {"code": "CS 428", "title": "Software Engineering", "credits": 3},
+              {"code": "CS 430", "title": "Formal Verification", "credits": 3},
+              {"code": "CS 431", "title": "Algorithmic Lang & Compilers", "credits": 3},
+              {"code": "CS 450", "title": "Computer Vision", "credits": 3},
+              {"code": "CS 452", "title": "Database Modeling Concepts", "credits": 3},
+              {"code": "CS 453", "title": "Fund of Information Retrieval", "credits": 3},
+              {"code": "CS 455", "title": "Computer Graphics", "credits": 3},
+              {"code": "CS 456", "title": "Mobile and Ubiquitous HCI", "credits": 3},
+              {"code": "CS 460", "title": "Comp Comms & Networking", "credits": 3},
+              {"code": "CS 462", "title": "Distributed System Design", "credits": 3},
+              {"code": "CS 465", "title": "Computer Security", "credits": 3},
+              {"code": "CS 466", "title": "Blockchain Technologies", "credits": 3},
+              {"code": "CS 470", "title": "Intro Artificial Intelligence", "credits": 3},
+              {"code": "CS 471", "title": "Voice Interfaces", "credits": 3},
+              {"code": "CS 473", "title": "Advanced Machine Learning", "credits": 3},
+              {"code": "CS 474", "title": "Deep Learning", "credits": 3},
+              {"code": "CS 479", "title": "Intro to Machine Translation", "credits": 3},
+              {"code": "CS 486", "title": "Verification and Validation", "credits": 3}
+            ]
+          },
+          {
+            "title": "Option 2.2 — Complete 1 of 2 Courses",
+            "creditsMin": 3,
+            "creditsMax": 3,
+            "courses": [
+              {"code": "CS 224", "title": "Computer Systems", "credits": 3},
+              {"code": "EC EN 224", "title": "Introduction to Computer Sys", "credits": 3}
+            ]
+          }
+        ]
+      }
+    ],
     "creditsMin": 19,
     "creditsMax": 19,
     "type": "minor"
   },
   {
     "name": "Computer Science Teaching (Minor)",
-    "requiredCourses": ["CS 111", "CS 224", "CS 235", "CS 236", "CS 240", "TES 377", "CS 477R"],
-    "electiveCourses": [],
+    "requirements": [
+      {
+        "title": "Requirement 1 — Complete 6 Courses",
+        "creditsMin": 18,
+        "creditsMax": 18,
+        "courses": [
+          {"code": "CS 111", "title": "Intro to Computer Science", "credits": 3},
+          {"code": "CS 224", "title": "Computer Systems", "credits": 3},
+          {"code": "CS 235", "title": "Data Structures", "credits": 3},
+          {"code": "CS 236", "title": "Discrete Structures", "credits": 3},
+          {"code": "CS 240", "title": "Adv Software Construction", "credits": 4},
+          {"code": "TES 377", "title": "Tchg Mthds in Technology Educ", "credits": 2}
+        ]
+      },
+      {
+        "title": "Requirement 2 — Complete 1 Course",
+        "creditsMin": 4,
+        "creditsMax": 4,
+        "courses": [
+          {"code": "TES 477R", "title": "Sec Minor Student Teaching", "credits": 4}
+        ]
+      }
+    ],
     "creditsMin": 22,
     "creditsMax": 22,
     "type": "minor"
   },
   {
     "name": "Machine Learning (BS)",
-    "requirements": [],
+    "requirements": [
+      {
+        "title": "Requirement 1 — Complete 12 Courses",
+        "creditsMin": 31,
+        "creditsMax": 31,
+        "courses": [
+          {"code": "CS 111", "title": "Intro to Computer Science", "credits": 3},
+          {"code": "CS 180", "title": "Intro to Data Science", "credits": 3},
+          {"code": "CS 191", "title": "Exploring CS", "credits": 0.5},
+          {"code": "CS 235", "title": "Data Structures", "credits": 3},
+          {"code": "CS 236", "title": "Discrete Structures", "credits": 3},
+          {"code": "CS 240", "title": "Adv Software Construction", "credits": 4},
+          {"code": "CS 270", "title": "Intro to Machine Learning", "credits": 3},
+          {"code": "CS 291", "title": "Careers in CS", "credits": 0.5},
+          {"code": "CS 312", "title": "Algorithm Design & Analysis", "credits": 3},
+          {"code": "CS 404", "title": "Ethics & Computers in Society", "credits": 2},
+          {"code": "CS 473", "title": "Advanced Machine Learning", "credits": 3},
+          {"code": "CS 474", "title": "Deep Learning", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 2 - Complete 3 Courses",
+        "creditsMin": 10,
+        "creditsMax": 10,
+        "courses": [
+          {"code": "MATH 112", "title": "Calculus I", "credits": 4},
+          {"code": "MATH 290", "title": "Fundamentals of Mathematics", "credits": 3},
+          {"code": "MATH 380", "title": "Mathematics of Data Science", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 3 - Complete 2 Courses",
+        "creditsMin": 3,
+        "creditsMax": 3,
+        "courses": [
+          {"code": "MATH 213", "title": "Elementary Linear Algebra", "credits": 2},
+          {"code": "MATH 215", "title": "Computational Linear Algebra", "credits": 1}
+        ]
+      },
+      {
+        "title": "Requirement 4 - Complete 1 of 2 Courses",
+        "creditsMin": 3,
+        "creditsMax": 3,
+        "courses": [
+          {"code": "STAT 121", "title": "Intro to Stat Data Analysis", "credits": 3},
+          {"code": "STAT 201", "title": "Stat for Engineers & Scientist", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 5 — Complete 1 of 3 Courses",
+        "creditsMin": 3,
+        "creditsMax": 3,
+        "courses": [
+          {"code": "ECON 388", "title": "Intro to Econometrics", "credits": 3},
+          {"code": "STAT 220", "title": "Stat Modeling for Data Science", "credits": 3},
+          {"code": "STAT 330", "title": "Introduction to Regression", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 6 — Complete 3 of 7 Courses",
+        "creditsMin": 9,
+        "creditsMax": 9,
+        "courses": [
+          {"code": "CS 412", "title": "Linear Prog/Convx Optimization", "credits": 3},
+          {"code": "CS 450", "title": "Computer Vision", "credits": 3},
+          {"code": "CS 470", "title": "Intro Artificial Intelligence", "credits": 3},
+          {"code": "CS 471", "title": "Voice Interfaces", "credits": 3},
+          {"code": "CS 479", "title": "Intro to Machine Translation", "credits": 3},
+          {"code": "CS 574", "title": "Transformers for NLP", "credits": 3},
+          {"code": "MATH 512", "title": "Methods of Applied Math II", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 7 — Complete 6 hours",
+        "creditsMin": 6,
+        "creditsMax": 6,
+        "options": [
+          {
+            "title": "Option 7.1 — Complete up to 6 hours",
+            "creditsMin": 6,
+            "creditsMax": 6,
+            "courses": [
+              {"code": "CS 482", "title": "Data Science Capstone I", "credits": 3},
+              {"code": "CS 483", "title": "Data Science Capstone II", "credits": 3}
+            ]
+          },
+          {
+            "title": "Option 7.2 — Complete up to 6 hours",
+            "creditsMin": 6,
+            "creditsMax": 6,
+            "courses": [
+              {"code": "CS 497R", "title": "Undergraduate Research", "credits": 6}
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Requirement 8 — Complete 9 hours",
+        "creditsMin": 9,
+        "creditsMax": 10,
+        "courses": [
+          {"code": "CS 412", "title": "Linear Prog/Convx Optimization", "credits": 3},
+          {"code": "CS 450", "title": "Computer Vision", "credits": 3},
+          {"code": "CS 452", "title": "Database Modeling Concepts", "credits": 3},
+          {"code": "CS 453", "title": "Fund of Information Retrieval", "credits": 3},
+          {"code": "CS 470", "title": "Intro Artificial Intelligence", "credits": 3},
+          {"code": "CS 471", "title": "Voice Interfaces", "credits": 3},
+          {"code": "CS 479", "title": "Intro to Machine Translation", "credits": 3},
+          {"code": "CS 513", "title": "Robust Control", "credits": 3},
+          {"code": "CS 574", "title": "Transformers for NLP", "credits": 3},
+          {"code": "CS 575", "title": "Intro to Network Science", "credits": 3},
+          {"code": "CS 580", "title": "Theory of Predictive Modeling", "credits": 3},
+          {"code": "ECON 378", "title": "Statistics for Economists", "credits": 3},
+          {"code": "LING 581", "title": "Natural Lang Processing", "credits": 3},
+          {"code": "MATH 113", "title": "Calculus II", "credits": 4},
+          {"code": "MATH 314", "title": "Calculus of Several Variables", "credits": 3},
+          {"code": "MATH 413", "title": "Advanced Linear Algebra", "credits": 3},
+          {"code": "MATH 431", "title": "Probability Theory", "credits": 3},
+          {"code": "STAT 240", "title": "Probability and Inference I", "credits": 3},
+          {"code": "STAT 251", "title": "Intro to Bayesian Statistics", "credits": 3},
+          {"code": "STAT 340", "title": "Probability and Inference I", "credits": 3},
+          {"code": "STAT 346", "title": "Data Science Process", "credits": 3}
+        ]
+      },
+      {
+        "title": "Requirement 9 - Complete Senior Exit Interview with the CS department during your last semester or term",
+        "creditsMin": 0,
+        "creditsMax": 0
+      }
+    ],
     "creditsMin": 74,
     "creditsMax": 74,
     "type": "major"
