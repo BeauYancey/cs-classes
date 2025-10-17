@@ -1,6 +1,7 @@
 import { Tabs, Title, Text, Group, useMantineTheme } from "@mantine/core"
 import { GraduationCapIcon, PathIcon, ChalkboardSimpleIcon, TargetIcon } from "@phosphor-icons/react"
 import { useEffect, useState } from "react"
+import ProgramsPage from "./pages/ProgramsPage";
 
 function App() {
   const [activeTab, setActiveTab] = useState<string | null>("courses")
@@ -15,7 +16,7 @@ function App() {
       <Title order={1} mb="md">BYU Computer Science Department</Title>
 
       <Tabs value={activeTab} onChange={setActiveTab}>
-        <Tabs.List mb="md">
+        <Tabs.List mb="md" pos="sticky" top={0} bg={theme.white} style={{zIndex: 20}} >
           <Tabs.Tab value="courses" bg={activeTab === "courses" ? theme.colors.royal[0] : undefined}><Group gap="xs">
             <ChalkboardSimpleIcon size={22} />
             <Title order={4}>Courses</Title>    
@@ -42,8 +43,7 @@ function App() {
         </Tabs.Panel>
 
         <Tabs.Panel value="programs">
-          {/* Add page components here */}
-          <Text>Programs Page</Text>
+          <ProgramsPage isActiveTab={activeTab === "programs"}/>
         </Tabs.Panel>
 
         <Tabs.Panel value="grad-plan">

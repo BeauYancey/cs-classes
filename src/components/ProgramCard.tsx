@@ -1,33 +1,36 @@
-import { Card, Stack, Title, Image } from "@mantine/core";
+import { Card, Stack, Title } from "@mantine/core";
 import { Data } from "./Data";
 import type { Program } from "../types/Program";
 import { ClockIcon, GraduationCapIcon } from "@phosphor-icons/react";
+import type { MouseEventHandler } from "react";
 
 interface ProgramCardProps {
   program: Program;
+  onClick?: MouseEventHandler
 }
 
-const ProgramCard: React.FC<ProgramCardProps> = ({program}) => {
+const ProgramCard: React.FC<ProgramCardProps> = ({program, onClick}) => {
 
   return (
-    <Card shadow="sm" padding="lg" radius="md" withBorder flex="1 0 16rem">
-      <Card.Section>
-          <Image 
-            src={""} 
-            style={{ objectFit: "cover", height: "12rem", width: "100%" }}
-          />
-      </Card.Section>
-
-      <Title order={3} my="xs">{program.name}</Title>
+    <Card
+      shadow="sm" 
+      padding="lg" 
+      radius="md" 
+      withBorder 
+      flex="1 1"
+      onClick={onClick}
+      style={{cursor: "pointer"}}
+    >
+      <Title order={3} mb="sm">{program.name}</Title>
       <Stack gap="0.25rem">
         <Data 
           label="Type" 
-          value={program.type} 
+          value={program.type.charAt(0).toUpperCase() + program.type.slice(1)} 
           leftSection={<GraduationCapIcon size={16}/>} 
         />
         <Data 
-          label="Adoption Fee" 
-          value={`${program.creditsMin} - ${program.creditsMax} credits`} 
+          label="Credits" 
+          value={`${program.creditsMin} - ${program.creditsMax}`} 
           leftSection={<ClockIcon size={16}/>} 
         />
       </Stack>
