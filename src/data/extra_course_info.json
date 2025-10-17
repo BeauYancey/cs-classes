@@ -12,7 +12,7 @@
     "courseTypicallyOffered": "Fall, Winter, Spring",
     "note": "Designed for those with no prior experience in programming",
     "learningOutcomes": [],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "14242-000"
@@ -95,7 +95,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "CS 110 or equivalent prior programming experience\n",
     "recommended": "Prior programming experience should include statements, variables, control flow (if/while), and functions",
     "id": "14243-000"
@@ -113,7 +113,7 @@
     "courseTypicallyOffered": null,
     "note": null,
     "learningOutcomes": [],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "01489-002"
@@ -131,7 +131,7 @@
     "courseTypicallyOffered": "Fall and Winter",
     "note": null,
     "learningOutcomes": [],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "CS 110 or equivalent prior programming experience",
     "recommended": "Prior programming experience should include statements, variables, control flow (if/while), and functions",
     "id": "14033-000"
@@ -174,9 +174,7 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": []
-    },
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": "Recommend during freshman year, first semester after transferring to BYU, first semester after transferring from another major, or while enrolled in CS 110 or CS 111",
     "id": "v1JopuxKkYwo7uUFdY0y"
@@ -209,7 +207,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "01492-003"
@@ -250,7 +248,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "Instructor's consent.",
     "recommended": null,
     "id": "12529-000"
@@ -333,38 +331,10 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "01489-002",
-                      "14243-000"
-                    ],
-                    "logic": "or"
-                  }
-                ],
-                "subSelections": [],
-                "id": "QUEDWObv"
-              },
-              "name": "Prerequisites",
-              "id": "BOKQ1syGrnYtiRtxwdBL"
-            }
-          ],
-          "id": "kFxcgvPlWQMd3rGEAQZL",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 142",
+      "C S 111"
+    ],
     "nonEnforcedPrerequisites": "With instructor consent, may be taken concurrently with C S 203 and 204.",
     "recommended": null,
     "id": "13855-000"
@@ -407,37 +377,10 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "13855-000",
-                      "10648-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "a6mcAoyMSeT1hbWi7B3h"
-            }
-          ],
-          "id": "lkqUaM9hciqjt76b4bkg",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 202",
+      "C S 235"
+    ],
     "nonEnforcedPrerequisites": "With instructor consent, may be taken concurrently with C S 202 and 204.",
     "recommended": null,
     "id": "13856-000"
@@ -496,37 +439,10 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "13856-000",
-                      "09200-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "CQp9lHbxJ0tFgRaaXHGv"
-            }
-          ],
-          "id": "AznZNMY0wNr5PuduCbhj",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 203",
+      "C S 240"
+    ],
     "nonEnforcedPrerequisites": "With instructor consent, may be taken concurrently with C S 202 and 203.",
     "recommended": null,
     "id": "13857-000"
@@ -644,36 +560,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "10648-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "NmwouN7JhVmPUdBdqZt9"
-            }
-          ],
-          "id": "EgYIh8ioTTehWor8rSIW",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 235"
+    ],
     "nonEnforcedPrerequisites": "or instructor's consent.",
     "recommended": null,
     "id": "10178-002"
@@ -769,60 +658,7 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "anyOf",
-              "subRules": [
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "01489-002"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "VJmSfYUhvwGBxoQMlEYO"
-                },
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "14243-000"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "sS1iak6hrFpSE7ifBMWo"
-                }
-              ],
-              "name": "Prerequisites",
-              "id": "taPkiznFE5cgp07EBIO2"
-            }
-          ],
-          "id": "7B7BHEvqnDvO4h1gSH7x",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "10648-000"
@@ -863,36 +699,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "10648-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "hqMkqIylwf4WHaT4SIv0"
-            }
-          ],
-          "id": "QpY5TJSCEcGiQqH1vsPn",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 235"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "10649-000"
@@ -989,37 +798,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "10648-000"
-                    ]
-                  }
-                ],
-                "subSelections": [],
-                "id": "ovvJIzdv"
-              },
-              "name": "Prerequisites",
-              "id": "21pPZN0OdWplbJcVKics"
-            }
-          ],
-          "id": "a0Mol0DasZcmekxeACz5",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 235"
+    ],
     "nonEnforcedPrerequisites": "or instructor's consent.",
     "recommended": null,
     "id": "09200-000"
@@ -1093,7 +874,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "C S 236 or concurrent enrollment.",
     "recommended": null,
     "id": "06974-004"
@@ -1164,7 +945,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "OrDuSOiqhvX4Rz3I3WJr"
@@ -1223,39 +1004,10 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAnyOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "01489-002",
-                      "14243-000"
-                    ],
-                    "logic": "or"
-                  }
-                ],
-                "subSelections": [],
-                "id": "SrdNIrFr"
-              },
-              "name": "Prerequisites",
-              "id": "9ivjvH9vvnV5WYsYm6Un",
-              "restriction": 1
-            }
-          ],
-          "id": "LSt4ZSZXtIf2ZR4S86QS",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 142",
+      "C S 111"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "13420-000"
@@ -1298,64 +1050,7 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "unjfyzvq",
-          "name": "Prerequisites",
-          "type": "Completion Requirement",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "lRkFBDTM",
-              "condition": "anyOf",
-              "subRules": [
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "value": [
-                          "14243-000",
-                          "03615-008"
-                        ],
-                        "logic": "and"
-                      }
-                    ],
-                    "id": "Q28Rj7Y2",
-                    "subSelections": []
-                  },
-                  "id": "pfoZqQy3",
-                  "name": "Prerequisites"
-                },
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "value": [
-                          "01489-002",
-                          "03615-008"
-                        ],
-                        "logic": "and"
-                      }
-                    ],
-                    "id": "cmZ1qXkK",
-                    "subSelections": []
-                  },
-                  "id": "KVkJQC2F",
-                  "name": "Prerequisites"
-                }
-              ],
-              "name": "Prerequisites"
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "dBwXcrBxxGfbtBqMvDyJ"
@@ -1398,38 +1093,10 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "Zh2mMpU3",
-          "name": "Prerequisite ",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "VqXGf5Az",
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "14243-000",
-                      "v1JopuxKkYwo7uUFdY0y"
-                    ],
-                    "logic": "and"
-                  }
-                ],
-                "id": "YWIRQ8RM",
-                "subSelections": []
-              },
-              "name": "Prerequisite "
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 111",
+      "C S 191"
+    ],
     "nonEnforcedPrerequisites": "Recommend during freshman year or second semester after transferring to BYU",
     "recommended": null,
     "id": "ZQzDhd5T7LGKgD7DTVtp"
@@ -1470,7 +1137,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "Instructor's consent",
     "recommended": null,
     "id": "11439-000"
@@ -1546,37 +1213,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "10649-000"
-                    ],
-                    "logic": "and"
-                  }
-                ],
-                "subSelections": [],
-                "id": "6vqyMUcw"
-              },
-              "name": "Prerequisites",
-              "id": "uPK4Aix9wgJKAckr5Go0"
-            }
-          ],
-          "id": "4alOiKjh1sigBLojkynJ",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 236"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "01499-002"
@@ -1619,36 +1258,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "10178-002"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "aRiZ6kFqtACbX4zybJmX"
-            }
-          ],
-          "id": "Ew61ObswyHOVgIPWDjDQ",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 224"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "13421-000"
@@ -1723,37 +1335,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "13420-000"
-                    ]
-                  }
-                ],
-                "subSelections": [],
-                "id": "s8iSKFHS"
-              },
-              "name": "Prerequisites",
-              "id": "4ziZQytTboblDH8DRZAc"
-            }
-          ],
-          "id": "qYBtwOCR8EQoBCK8SKGk",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 260"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "13780-000"
@@ -1794,79 +1378,7 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "hYq7lSET",
-          "name": "Prerequisites",
-          "type": "Completion Requirement",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "UZc3Bbl3",
-              "condition": "anyOf",
-              "subRules": [
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "value": [
-                          "10649-000",
-                          "13420-000"
-                        ],
-                        "logic": "and"
-                      }
-                    ],
-                    "id": "ElAUgx73",
-                    "subSelections": []
-                  },
-                  "id": "UM779hsI"
-                },
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "value": [
-                          "10649-000",
-                          "10178-002"
-                        ],
-                        "logic": "and"
-                      }
-                    ],
-                    "id": "6W57oqYB",
-                    "subSelections": []
-                  },
-                  "id": "SgCjEQ9U"
-                },
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "value": [
-                          "03605-008",
-                          "10648-000"
-                        ],
-                        "logic": "and"
-                      }
-                    ],
-                    "id": "lzwWbiOn",
-                    "subSelections": []
-                  },
-                  "id": "5TkemtIC"
-                }
-              ]
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "01500-001"
@@ -1929,38 +1441,10 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "09200-000",
-                      "13420-000"
-                    ]
-                  }
-                ],
-                "subSelections": [],
-                "id": "YseAnCbg"
-              },
-              "name": "Prerequisites",
-              "id": "t7m1v3NFBVqn6usrx7nQ"
-            }
-          ],
-          "id": "2QYF53W0nfvz9SBgad9T",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 240",
+      "C S 260"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "11440-001"
@@ -2078,37 +1562,10 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "10178-002",
-                      "09200-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "zrNm2tjEBupyccuA3PMT"
-            }
-          ],
-          "id": "0iktpTbw0BjcLkpa5NS2",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 224",
+      "C S 240"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "01513-003"
@@ -2204,62 +1661,7 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "anyOf",
-              "subRules": [
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "09200-000"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "lJUMxlvy5JH3GIgCDDOm"
-                },
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "09200-000",
-                          "13764-000",
-                          "13765-000"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "Z0zPrHKgGpLgUf6ELiPc"
-                }
-              ],
-              "name": "Prerequisites",
-              "id": "JHf0beB4zrIGSQa0wqla"
-            }
-          ],
-          "id": "vMQqPcG6MBz8GGHJiCAO",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "12329-002"
@@ -2343,43 +1745,10 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "OrDuSOiqhvX4Rz3I3WJr"
-                    ],
-                    "logic": "and"
-                  },
-                  {
-                    "value": [
-                      "13420-000"
-                    ],
-                    "logic": "and"
-                  }
-                ],
-                "subSelections": [],
-                "id": "BbGQx45x"
-              },
-              "name": "Prerequisites",
-              "id": "pmP4WRCvjVu2tDvFrMOz"
-            }
-          ],
-          "id": "ip2uxcmmEkTZ2IiuduyD",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 256",
+      "C S 260"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "12328-001"
@@ -2414,36 +1783,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "01499-002"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "YpEDAEJ3EuRdgOsLNR0T"
-            }
-          ],
-          "id": "8ulIvHnKzs8QFkfKvvVP",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 312"
+    ],
     "nonEnforcedPrerequisites": "or instructor consent",
     "recommended": null,
     "id": "14034-000"
@@ -2473,7 +1815,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "Instructor's consent",
     "recommended": null,
     "id": "10951-000"
@@ -2536,37 +1878,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "09200-000",
-                      "01857-008"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "Udo5AWPT9kMcAufwusPf"
-            }
-          ],
-          "id": "Nam1jYkl6JYrhHFC4pvU",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 240"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "10181-000"
@@ -2596,37 +1910,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "09200-000",
-                      "01857-008"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "epf7e8PZEzp5koDe5bml"
-            }
-          ],
-          "id": "bg08sbWoDkPqqWvRupp2",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 240"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "11295-000"
@@ -2711,37 +1997,7 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "13764-000",
-                      "13765-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "8TUNpjyKqa5l24EQVpi9"
-            }
-          ],
-          "id": "i2EnFgiKqZIqdasWf7EL",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [],
     "nonEnforcedPrerequisites": "or instructor's consent.",
     "recommended": null,
     "id": "11187-001"
@@ -2792,36 +2048,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "WuTF8oz2",
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "Zn4itW9w",
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "01499-002"
-                    ],
-                    "logic": "and"
-                  }
-                ],
-                "id": "GsvDWlF2",
-                "subSelections": []
-              }
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 312"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "O2c9KsIruYijFpqHTG7W"
@@ -2873,36 +2102,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "11440-001"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "o5yIAYvtELCBalW37xmd"
-            }
-          ],
-          "id": "j1MxRVGoDNeWHD0f9t3a",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 340"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "01512-003"
@@ -2969,37 +2171,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "fwf8GBSh",
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "cucV09Ux",
-              "condition": "completedAnyOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "01500-001",
-                      "03605-008"
-                    ],
-                    "logic": "or"
-                  }
-                ],
-                "id": "Gct7J7hE",
-                "subSelections": []
-              }
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 330"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "NU6fVudBupwbVVUl7vac"
@@ -3062,36 +2236,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "11440-001"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "n0mak7UhQ2tyGOUQnedH"
-            }
-          ],
-          "id": "er7O5g7hwEXfe7TN3868",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 340"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "01510-000"
@@ -3121,62 +2268,7 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "anyOf",
-              "subRules": [
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "01499-002"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "LO0g7AWsXqHj8RUYZoYR"
-                },
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "01499-002",
-                          "13764-000",
-                          "13765-000"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "mAmFIaurPPcGWnOX54YH"
-                }
-              ],
-              "name": "Prerequisites",
-              "id": "DtgLou23pGuKHHEx0gW2"
-            }
-          ],
-          "id": "5cmeJ6xA1bWShaECMWh9",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": "Stat 121 or Stat 201",
     "id": "09201-001"
@@ -3239,36 +2331,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "09200-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "uGXoPJZ7OfoY9STSd01P"
-            }
-          ],
-          "id": "1wGkRLK9vI1ybvk0PIfz",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 240"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "08102-002"
@@ -3342,36 +2407,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "09200-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "PT2El102W49Zq3rcg8kk"
-            }
-          ],
-          "id": "HXk9l6b34oBx6dKRbIod",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 240"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "11823-000"
@@ -3401,38 +2439,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "0oyGR8bk",
-          "name": "Prerequisites",
-          "type": "Completion Requirement",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "th06WEry",
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "12329-002",
-                      "13764-000",
-                      "13765-000"
-                    ],
-                    "logic": "and"
-                  }
-                ],
-                "id": "Hh143uLR",
-                "subSelections": []
-              }
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 355"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "06774-000"
@@ -3516,37 +2525,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "12328-001"
-                    ]
-                  }
-                ],
-                "subSelections": [],
-                "id": "FYXa3jOC"
-              },
-              "name": "Prerequisites",
-              "id": "j3LnijbktpOPVhOLHuF8"
-            }
-          ],
-          "id": "SvUPd746IN7Kzmx06B6Q",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 356"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "09202-000"
@@ -3620,37 +2601,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "10648-000"
-                    ]
-                  }
-                ],
-                "subSelections": [],
-                "id": "EzK1amNZ"
-              },
-              "name": "Prerequisites",
-              "id": "vPsHwDNkrAEm21TIsAto"
-            }
-          ],
-          "id": "KdqjkmpKE8BTBTNmZPMY",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 235"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "07626-002"
@@ -3713,60 +2666,7 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "anyOf",
-              "subRules": [
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "13421-000"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "rNrMpC1zjdRSE0aUtuEo"
-                },
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "C S 360"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "UaCIHp1EqLzRC13bFMTw"
-                }
-              ],
-              "name": "Prerequisites",
-              "id": "46zA81UQPeLNzmjZGTC4"
-            }
-          ],
-          "id": "95wBNlPcasaiMcBEc5FO",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [],
     "nonEnforcedPrerequisites": " or equivalent experience.",
     "recommended": null,
     "id": "10117-000"
@@ -3807,36 +2707,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "13421-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "rAr2STrQsIV6K2gKesRE"
-            }
-          ],
-          "id": "dlsKocaApvtn6k6NiLXH",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 324"
+    ],
     "nonEnforcedPrerequisites": "or concurrent enrollment.",
     "recommended": null,
     "id": "10321-000"
@@ -3907,36 +2780,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "RGTle4Hg",
-          "name": "Untitled Requirement",
-          "type": "Completion Requirement",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "PFpOvOO4",
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "01499-002"
-                    ],
-                    "logic": "and"
-                  }
-                ],
-                "id": "yC8JiEtq",
-                "subSelections": []
-              }
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 312"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "L4M3LZdHS1ASklCQe82y"
@@ -4010,82 +2856,7 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "anyOf",
-              "subRules": [
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "01499-002",
-                          "13765-000",
-                          "05604-032"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "PDVfMawqZ93RwSmAA1iC"
-                },
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "01499-002",
-                          "13765-000",
-                          "05620-005"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "6IUTwdLFW6X77JUzXZwM"
-                },
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "01499-002",
-                          "05604-032"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "SejbyCqer41l5F9M9Kzk"
-                }
-              ],
-              "name": "Prerequisites",
-              "id": "q5ELOYbpuTagjscdySzA"
-            }
-          ],
-          "id": "zkqnrMkQwsC87EPTclqD",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "01526-002"
@@ -4112,37 +2883,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "9icXS0cx",
-          "name": "Prerequisites",
-          "type": "Completion Requirement",
-          "showInCatalog": false,
-          "position": 0,
-          "rules": [
-            {
-              "id": "soNL4Tcy",
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "01499-002"
-                    ],
-                    "logic": "and"
-                  }
-                ],
-                "id": "Jsgcy6C6",
-                "subSelections": []
-              }
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 312"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": "Students should be proficient in basic coding skills and familiar with Python",
     "id": "14035-000"
@@ -4194,82 +2937,7 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "anyOf",
-              "subRules": [
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "01499-002",
-                          "13765-000",
-                          "05604-032"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "c04fqPQSKD7pp8dC7Rtl"
-                },
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "01499-002",
-                          "13765-000",
-                          "05620-005"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "DBEKI8R8FYaoFi9Kjq0w"
-                },
-                {
-                  "condition": "completedAllOf",
-                  "value": {
-                    "condition": "courses",
-                    "values": [
-                      {
-                        "logic": "and",
-                        "value": [
-                          "01499-002",
-                          "05604-032"
-                        ]
-                      }
-                    ],
-                    "subSelections": []
-                  },
-                  "name": "Prerequisites",
-                  "id": "CTW0NekTeU0QMTT1YSO9"
-                }
-              ],
-              "name": "Prerequisites",
-              "id": "0xoLtyFNmIIX2CLeGgzM"
-            }
-          ],
-          "id": "V5KGv37ixCDen2Iv75Y3",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "10322-004"
@@ -4312,38 +2980,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "6FReiBgZ",
-          "name": "Prerequisite",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "R6SmP5UQ",
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "10322-004",
-                      "13764-000",
-                      "13765-000"
-                    ],
-                    "logic": "and"
-                  }
-                ],
-                "id": "lqePWxef",
-                "subSelections": []
-              }
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 472"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "7b8qjZGPTWljWRjhWSRr"
@@ -4370,39 +3009,10 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "4jm0VYsu",
-          "name": "Prerequisite ",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "Ghu99o7Q",
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "01499-002",
-                      "10322-004",
-                      "12181-001"
-                    ],
-                    "logic": "or"
-                  }
-                ],
-                "id": "vmhZxUjB",
-                "subSelections": []
-              },
-              "name": "Prerequisite "
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 312",
+      "C S 472"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "13781-000"
@@ -4420,7 +3030,7 @@
     "courseTypicallyOffered": "Fall, Winter, Spring",
     "note": null,
     "learningOutcomes": [],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "Sc Ed 477R or minor area equivalent; admittance to teaching area; FBI fingerprint background clearance.",
     "recommended": null,
     "id": "13460-000"
@@ -4504,37 +3114,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "JaIFjOVR",
-          "name": "Prerequisites",
-          "type": "Completion Requirement",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "DZUeGyyg",
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "09200-000"
-                    ],
-                    "logic": "and"
-                  }
-                ],
-                "id": "1xNiQyXt",
-                "subSelections": []
-              },
-              "name": "Prerequisites"
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 240"
+    ],
     "nonEnforcedPrerequisites": "Reading ability in a language other than English. ",
     "recommended": "Python proficiency, CS 474 or CS 472 or Ling 581 or similar exposure to MT or NLP technologies. ",
     "id": "5oKtVHJxYCPgzKH8922E"
@@ -4561,37 +3143,10 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "13780-000",
-                      "11440-001"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "McZJSmVWW7C75x8K5LVF"
-            }
-          ],
-          "id": "nJcCWr0dwGlMQ2ynHQeZ",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 329",
+      "C S 340"
+    ],
     "nonEnforcedPrerequisites": "Minimum 3.0 CS GPA or instructor's consent.",
     "recommended": null,
     "id": "13941-000"
@@ -4618,36 +3173,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "13941-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "S23EySjvFoilCZQLz102"
-            }
-          ],
-          "id": "VnKMZ0dINpIwUEDSs2CO",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 480"
+    ],
     "nonEnforcedPrerequisites": "Minimum 3.0 CS GPA or instructor's consent.",
     "recommended": null,
     "id": "13942-000"
@@ -4674,37 +3202,10 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "09200-000",
-                      "01499-002"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "c19tLAspiRXTiIrfJL2B"
-            }
-          ],
-          "id": "wDiGNbT1L0xzkIrJ4ooL",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 240",
+      "C S 312"
+    ],
     "nonEnforcedPrerequisites": "Minimum 3.0 CS GPA or instructor's consent.",
     "recommended": null,
     "id": "13943-000"
@@ -4731,36 +3232,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "13943-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "w6TiqisjBT3J7TI1abpe"
-            }
-          ],
-          "id": "RVC5fzq6P6WSVlmO0iGF",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 482"
+    ],
     "nonEnforcedPrerequisites": "Minimum 3.0 CS GPA or instructor's consent.",
     "recommended": null,
     "id": "13944-000"
@@ -4889,36 +3363,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "01499-002"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "5P6pj7XzyVfWnQdOQ3ZK"
-            }
-          ],
-          "id": "8bdn1AnIL5FB7Pz4u3ya",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 312"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "10952-003"
@@ -4936,36 +3383,9 @@
     "courseTypicallyOffered": "Winter",
     "note": null,
     "learningOutcomes": [],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "09200-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "xHh13Hc7aD0YA9vfXWTG"
-            }
-          ],
-          "id": "jHmhL6ILNDOy0R0UYB8L",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 240"
+    ],
     "nonEnforcedPrerequisites": "Minimum 3.0 C S GPA or instructor's consent.",
     "recommended": null,
     "id": "13435-000"
@@ -4992,36 +3412,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "09200-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "fT8OeFk3nHIeVUrmEpbr"
-            }
-          ],
-          "id": "7TIUwfzviP3oTILnQTQN",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 240"
+    ],
     "nonEnforcedPrerequisites": "Minimum 3.0 CS GPA or instructor's consent.",
     "recommended": null,
     "id": "13422-000"
@@ -5048,36 +3441,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "09200-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "d8letXKbQEC1cx5IXnAY"
-            }
-          ],
-          "id": "VJxtEojCgj1mDAhjUT0X",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 240"
+    ],
     "nonEnforcedPrerequisites": "Minimum 3.0 CS GPA or instructor's consent.",
     "recommended": null,
     "id": "13423-000"
@@ -5104,7 +3470,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "Students must turn in signed research agreement at least 1 business day before add/drop deadline in order to receive permission-to-add code. Research agreement form can be found at&#160;<a href=\"http://cs.byu.edu\" target=\"_blank\">http://cs.byu.edu</a> or in the CS Department office.",
     "recommended": null,
     "id": "13424-000"
@@ -5134,36 +3500,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "09200-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "qicYQMgyHfMDQ3d2OPaX"
-            }
-          ],
-          "id": "dZYY036eSgKLPXr9izq5",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 240"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "12417-000"
@@ -5215,7 +3554,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "11910-008"
@@ -5245,7 +3584,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "Instructor's consent",
     "recommended": null,
     "id": "10939-000"
@@ -5263,7 +3602,7 @@
     "courseTypicallyOffered": "Fall and Winter",
     "note": null,
     "learningOutcomes": [],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "13975-000"
@@ -5348,37 +3687,7 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "13764-000",
-                      "13765-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "gUFNaS8gKrQtougPHWXw"
-            }
-          ],
-          "id": "4AToXBVAWHYhjMQ49nbC",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": "C S 312 and 412; Math 334; or equivalents",
     "id": "11441-002"
@@ -5437,37 +3746,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "RNecfwUB",
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "vvtacvMC",
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "12328-001"
-                    ],
-                    "logic": "and"
-                  }
-                ],
-                "id": "on4vewwQ",
-                "subSelections": []
-              },
-              "name": "Prerequisites"
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 356"
+    ],
     "nonEnforcedPrerequisites": "Prior experience in user experience or human-computer interaction.",
     "recommended": null,
     "id": "DifxrQrbfF40aDgLJJYY"
@@ -5526,38 +3807,10 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "PXN6FP7A",
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "CWeIiuM9",
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "10322-004",
-                      "01499-002"
-                    ],
-                    "logic": "and"
-                  }
-                ],
-                "id": "lYTCvwl2",
-                "subSelections": []
-              },
-              "name": "Prerequisites"
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 472",
+      "C S 312"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "w59qaEZKiAtc3v48pqQj"
@@ -5654,36 +3907,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "2cpieSkp",
-          "name": "Prerequisites",
-          "type": "Completion Requirement",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "LUYhATHS",
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "01499-002"
-                    ],
-                    "logic": "and"
-                  }
-                ],
-                "id": "wQU2RyS2",
-                "subSelections": []
-              }
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "C S 312"
+    ],
     "nonEnforcedPrerequisites": "Linear Algebra",
     "recommended": null,
     "id": "vYVSssNIbN1SWjymnk1e"
@@ -5701,37 +3927,7 @@
     "courseTypicallyOffered": "Fall",
     "note": null,
     "learningOutcomes": [],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "13764-000",
-                      "13765-000"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "gELm0KdYUdmhkl3G3HD9"
-            }
-          ],
-          "id": "S9Admw3zk5FDpnuHpxHN",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "14084-000"
@@ -5772,37 +3968,7 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "id": "rGlqFZf7",
-          "name": "Prerequisite ",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "id": "NAuzBphU",
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "value": [
-                      "13819-000"
-                    ],
-                    "logic": "and"
-                  }
-                ],
-                "id": "ZFOa8TlF",
-                "subSelections": []
-              },
-              "name": "Prerequisite "
-            }
-          ],
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "11930-002"
@@ -5873,7 +4039,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "x6bwLatZvyYJSLiU4ZHf"
@@ -5900,7 +4066,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "10531-003"
@@ -5952,36 +4118,9 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "10531-003"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "9fybMADRfohAgnBETTb0"
-            }
-          ],
-          "id": "M7JqwEZ8M3af2R2hNwfE",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "CSANM 250"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "10533-002"
@@ -6022,7 +4161,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "11647-004"
@@ -6049,7 +4188,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "14031-000"
@@ -6076,7 +4215,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "CS Animation Emphasis Majors or Animation Majors; or instructor's consent",
     "recommended": null,
     "id": "14032-000"
@@ -6106,7 +4245,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "11931-002"
@@ -6151,7 +4290,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "12733-000"
@@ -6178,37 +4317,10 @@
         "justification": ""
       }
     ],
-    "requisites": {
-      "requisitesSimple": [
-        {
-          "name": "Prerequisites",
-          "type": "Prerequisite",
-          "showInCatalog": true,
-          "rules": [
-            {
-              "condition": "completedAllOf",
-              "value": {
-                "condition": "courses",
-                "values": [
-                  {
-                    "logic": "and",
-                    "value": [
-                      "10531-003",
-                      "10533-002"
-                    ]
-                  }
-                ],
-                "subSelections": []
-              },
-              "name": "Prerequisites",
-              "id": "7dR1ePRENLJPHUSvVf0M"
-            }
-          ],
-          "id": "KVw2z8dybyXF8DTvdvLk",
-          "sisId": ""
-        }
-      ]
-    },
+    "requisites": [
+      "CSANM 250",
+      "CSANM 252"
+    ],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "14216-000"
@@ -6253,7 +4365,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "11932-002"
@@ -6283,7 +4395,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "11933-002"
@@ -6328,7 +4440,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "10991-003"
@@ -6373,7 +4485,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "10992-003"
@@ -6403,7 +4515,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "11934-002"
@@ -6433,7 +4545,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "11935-002"
@@ -6485,7 +4597,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": null,
     "recommended": null,
     "id": "11936-002"
@@ -6543,7 +4655,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "Junior or senior status.",
     "recommended": null,
     "id": "11937-004"
@@ -6588,7 +4700,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "Junior or senior status.",
     "recommended": null,
     "id": "13772-000"
@@ -6618,7 +4730,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "Instructor's consent.",
     "recommended": null,
     "id": "12051-001"
@@ -6648,7 +4760,7 @@
         "justification": ""
       }
     ],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "BFA advisor's consent.",
     "recommended": null,
     "id": "12052-001"
@@ -6666,7 +4778,7 @@
     "courseTypicallyOffered": "Winter",
     "note": null,
     "learningOutcomes": [],
-    "requisites": {},
+    "requisites": [],
     "nonEnforcedPrerequisites": "CS 110 or equivalent prior programming experience",
     "recommended": "Prior programming experience should include statements, variables, control flow (if/while), and functions",
     "id": "hv3eRXFcTvyWGVxgZup4"

@@ -1,27 +1,45 @@
 import json
+import sys
+from pathlib import Path
 
-# Load your already-formatted data
-with open("new_formatted_courses.json", "r") as f:
-    formatted_courses = json.load(f)
+def update_requisites():
+    input_path= Path("src/data/formatted_courses.json")
+    output_path = Path("extra_course_info.json")
+    # Load the formatted courses file
+    with open(input_path, "r") as f:
+        courses = json.load(f)
 
-# Load the raw course data that includes "courseGroupId"
-with open("raw_courses.json", "r") as f:
-    raw_data = json.load(f)
-raw_courses = raw_data["data"]
+    # Create a map from course id object to course_id string
+    # This assumes each course object has an 'id' field mapping to 'course_id'
+    id_map = {course["id"]: course["course_id"] for course in courses}
 
-# Create a map from course_id to courseGroupId for quick lookup
-id_map = {course["code"]: course["courseGroupId"] for course in raw_courses}
+    for course in courses:
+        requisites = course.get("requisites", {})
+        new_reqs = []
 
-# Add "id" to each course in formatted_courses
-for course in formatted_courses:
-    course_id = course["course_id"]
-    if course_id in id_map:
-        course["id"] = id_map[course_id]
-    else:
-        print(f"Warning: No courseGroupId found for {course_id}")
+        # Handle cases where requisitesSimple exists
+        requisites_simple = requisites.get("requisitesSimple", [])
+        for req_group in requisites_simple:
+            rules = req_group.get("rules", [])
+            for rule in rules:
+                value = rule.get("value", {})
+                values_list = value.get("values", [])
+                for val_obj in values_list:
+                    for course_id_obj in val_obj.get("value", []):
+                        mapped_course_id = id_map.get(course_id_obj)
+                        if mapped_course_id:
+                            new_reqs.append(mapped_course_id)
 
-# Save the updated file
-with open("formatted_courses.json", "w") as f:
-    json.dump(formatted_courses, f, indent=2)
+        # Assign the simplified requisites list back to the course
+        course["requisites"] = new_reqs
 
-print("✅ Added 'id' field from courseGroupId to all matching courses.")
+    # Save the updated courses to the output file
+    with open(output_path, "w") as f:
+        json.dump(courses, f, indent=2)
+
+    print(f"✅ Updated requisites and saved to {output_path}")
+
+
+if __name__ == "__main__":
+
+    update_requisites()
