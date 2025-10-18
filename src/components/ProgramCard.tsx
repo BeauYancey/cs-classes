@@ -17,7 +17,6 @@ const ProgramCard: React.FC<ProgramCardProps> = ({program, onClick}) => {
       padding="lg" 
       radius="md" 
       withBorder 
-      flex="1 1"
       onClick={onClick}
       style={{cursor: "pointer"}}
     >

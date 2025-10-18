@@ -43,7 +43,7 @@ function App() {
         </Tabs.Panel>
 
         <Tabs.Panel value="programs">
-          <ProgramsPage isActiveTab={activeTab === "programs"}/>
+          <ProgramsPage />
         </Tabs.Panel>
 
         <Tabs.Panel value="grad-plan">
