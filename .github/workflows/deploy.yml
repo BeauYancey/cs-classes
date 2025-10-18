@@ -1,4 +1,4 @@
-name: Deploy Card Sorting Assignment
+name: Deploy CS Courses Assignment
 
 on:
   push:
