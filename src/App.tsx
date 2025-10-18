@@ -1,16 +1,12 @@
 import { Tabs, Title, Text, Group, useMantineTheme } from "@mantine/core"
 import { GraduationCapIcon, PathIcon, ChalkboardSimpleIcon, TargetIcon } from "@phosphor-icons/react"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import ProgramsPage from "./pages/ProgramsPage";
 import Courses from "./components/Courses/Courses"
 
 function App() {
   const [activeTab, setActiveTab] = useState<string | null>("courses")
   const theme = useMantineTheme();
-
-  useEffect(() => {
-    console.log(activeTab)
-  }, [activeTab])
 
   return (
     <main>
@@ -44,7 +40,7 @@ function App() {
         </Tabs.Panel>
 
         <Tabs.Panel value="programs">
-          <ProgramsPage />
+          <ProgramsPage isActiveTab={activeTab === "programs"}/>
         </Tabs.Panel>
 
         <Tabs.Panel value="grad-plan">
