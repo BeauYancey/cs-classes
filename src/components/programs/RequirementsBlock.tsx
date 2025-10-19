@@ -1,5 +1,5 @@
 import { Box, Stack, Text, Title, List } from '@mantine/core';
-import type { ProgramRequirement } from '../types/ProgramRequirement';
+import type { ProgramRequirement } from '../../types/ProgramRequirement';
 import { CircleIcon } from '@phosphor-icons/react';
 
 interface RequirementBlockProps {

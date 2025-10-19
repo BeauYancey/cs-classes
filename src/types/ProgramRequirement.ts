@@ -7,7 +7,7 @@ export interface ProgramRequirement {
   options?: ProgramRequirement[];
 }
 
-interface CourseSimple {
+export interface CourseSimple {
   code: string, 
   title: string, 
   credits: number

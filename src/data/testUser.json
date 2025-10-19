@@ -1,0 +1,10 @@
+{
+  "name": "Test User",
+  "program": "Computer Science (Minor)",
+  "completedCourses": [
+    {"code": "CS 111", "title": "Intro to Computer Science", "credits": 3},
+    {"code": "CS 180", "title": "Intro to Data Science", "credits": 3},
+    {"code": "CS 235", "title": "Data Structures", "credits": 3},
+    {"code": "CS 236", "title": "Discrete Structures", "credits": 3}
+  ]
+}

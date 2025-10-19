@@ -2,8 +2,8 @@ import { Box, Flex, Group, ScrollArea, Select, Stack, TextInput } from "@mantine
 import allPrograms from "../data/programs.json";
 import { useEffect, useRef, useState } from "react";
 import type { Program } from "../types/Program";
-import ProgramCard from "../components/ProgramCard";
-import ProgramDisplay from "../components/ProgramDisplay";
+import ProgramCard from "../components/programs/ProgramCard";
+import ProgramDisplay from "../components/programs/ProgramDisplay";
 import { ArrowDownIcon, ArrowUpIcon } from "@phosphor-icons/react";
 
 interface ProgramsPageProps {

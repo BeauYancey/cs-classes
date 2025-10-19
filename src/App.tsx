@@ -3,6 +3,9 @@ import { GraduationCapIcon, PathIcon, ChalkboardSimpleIcon, TargetIcon } from "@
 import { useState } from "react"
 import ProgramsPage from "./pages/ProgramsPage";
 import Courses from "./components/Courses/Courses"
+import GradPlanPage from "./pages/GradPlanPage";
+import testUser from "./data/testUser.json"
+import type { User } from "./types/User";
 
 function App() {
   const [activeTab, setActiveTab] = useState<string | null>("courses")
@@ -44,7 +47,7 @@ function App() {
         </Tabs.Panel>
 
         <Tabs.Panel value="grad-plan">
-          <Text>Graduation Plan</Text>
+          <GradPlanPage user={testUser as User} />
         </Tabs.Panel>
 
         <Tabs.Panel value="outcomes">
