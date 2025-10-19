@@ -1,6 +1,6 @@
 import { Card, Stack, Title } from "@mantine/core";
-import { Data } from "./Data";
-import type { Program } from "../types/Program";
+import { Data } from "../Data";
+import type { Program } from "../../types/Program";
 import { ClockIcon, GraduationCapIcon } from "@phosphor-icons/react";
 import type { MouseEventHandler } from "react";
 

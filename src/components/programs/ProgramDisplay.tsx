@@ -1,6 +1,6 @@
 import { Divider, Stack, Text, Title } from "@mantine/core"
-import type { Program } from "../types/Program"
-import { capitalize, getRange } from "../utils/stringUtils"
+import type { Program } from "../../types/Program"
+import { capitalize, getRange } from "../../utils/stringUtils"
 import RequirementsBlock from "./RequirementsBlock"
 
 interface ProgramDisplayProps {
