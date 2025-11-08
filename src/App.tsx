@@ -2,7 +2,7 @@ import { Tabs, Title, Text, Group, useMantineTheme } from "@mantine/core"
 import { GraduationCapIcon, PathIcon, ChalkboardSimpleIcon, TargetIcon } from "@phosphor-icons/react"
 import { useState } from "react"
 import ProgramsPage from "./pages/ProgramsPage";
-import Courses from "./components/Courses/Courses"
+import Courses from "./components/courses/Courses"
 import GradPlanPage from "./pages/GradPlanPage";
 import testUser from "./data/testUser.json"
 import type { User } from "./types/User";

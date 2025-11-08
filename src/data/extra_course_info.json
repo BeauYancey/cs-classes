@@ -181,10 +181,7 @@
   },
   {
     "course_id": "C S 199R",
-    "total_credits": [
-      0.5,
-      3
-    ],
+    "total_credits": "0.5-3",
     "lab_hours": 0,
     "lecture_hours": 0,
     "description": "Internships or cooperative education experiences with organizations outside BYU.",

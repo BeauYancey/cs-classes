@@ -9,9 +9,9 @@ export interface CourseLearningOutcome {
 
 export interface Course {
   course_id: string;
-  total_credits: number | number[]; 
+  total_credits: number | number[] | string; 
   lab_hours: number | null;
-  lecture_hours: number | null;
+  lecture_hours: number | string | null;
   description: string;
   name: string;
   long_name: string;
