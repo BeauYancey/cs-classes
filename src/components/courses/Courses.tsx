@@ -14,11 +14,12 @@ export default function Courses({ isActiveTab = true }: CoursesProps) {
   const [textFilter, setTextFilter] = useState("");
   const [creditFilter, setCreditFilter] = useState("");
   const [nameFilter, setNameFilter] = useState("");
-  const [levelFilter, setLevelFilter] = useState<string | null>(null);
   const [selectedCourse, setSelectedCourse] = useState<Course | undefined>();
+  const [levelInView, setLevelInView] = useState<string>("100");
 
   const boxRef = useRef<HTMLDivElement>(null);
   const displayScrollRef = useRef<HTMLDivElement>(null);
+  const viewportRef = useRef<HTMLDivElement>(null);
   const [scrollAreaHeight, setScrollAreaHeight] = useState<string>("0px");
 
   useEffect(() => {
@@ -60,20 +61,7 @@ export default function Courses({ isActiveTab = true }: CoursesProps) {
       course.name.toLowerCase().includes(nameFilter.toLowerCase()) ||
       course.long_name.toLowerCase().includes(nameFilter.toLowerCase());
     
-    // Level filter
-    let matchesLevel = true;
-    if (levelFilter) {
-      const match = course.course_id.match(/\d+/);
-      if (match) {
-        const courseNum = parseInt(match[0]);
-        const level = Math.floor(courseNum / 100) * 100;
-        matchesLevel = level.toString() === levelFilter;
-      } else {
-        matchesLevel = false;
-      }
-    }
-    
-    return matchesCode && matchesCredits && matchesName && matchesLevel;
+    return matchesCode && matchesCredits && matchesName;
   });
 
   // Group courses by level for display
@@ -93,6 +81,41 @@ export default function Courses({ isActiveTab = true }: CoursesProps) {
     });
     return groups;
   }, [filteredCourses]);
+
+  useEffect(() => {
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+
+    const onScroll = () => {
+      const viewportRect = viewport.getBoundingClientRect();
+      const viewportHeight = viewport.clientHeight;
+
+      Object.keys(groupedCourses).forEach(level => {
+        const levelSection = document.getElementById(`level-${level}`);
+        if (!levelSection) return;
+
+        const rect = levelSection.getBoundingClientRect();
+        const relativeTop = rect.top - viewportRect.top;
+        const relativeBottom = rect.bottom - viewportRect.top;
+
+        if (relativeTop < viewportHeight * 0.3 && relativeBottom > viewportHeight * 0.3) {
+          // level is in view
+          setLevelInView(level)
+        }
+      })
+    }
+
+    viewport.addEventListener('scroll', onScroll, true);
+    onScroll();
+    return () => viewportRef.current?.removeEventListener('scroll', onScroll);
+  }, [groupedCourses, viewportRef]);
+
+  const scrollToLevel = (level: string) => {
+    const scrollAnchor = document.getElementById(`scroll-${level}`);
+    if (scrollAnchor) {
+      scrollAnchor.scrollIntoView({ behavior: 'smooth', block: 'start' } );
+    }
+  }
 
   return (
     <Stack>
@@ -125,19 +148,13 @@ export default function Courses({ isActiveTab = true }: CoursesProps) {
         <Box w="100px" style={{ flexShrink: 0 }}>
           <ScrollArea h={scrollAreaHeight}>
             <Stack gap="xs" p="xs">
-              <NavLink
-                label="All"
-                active={!levelFilter}
-                onClick={() => setLevelFilter(null)}
-                style={{ cursor: 'pointer' }}
-              />
               {courseLevels.map(level => (
                 <NavLink
                   key={level}
                   label={`${level}s`}
-                  active={levelFilter === level}
-                  onClick={() => setLevelFilter(level)}
+                  onClick={() => scrollToLevel(level)}
                   style={{ cursor: 'pointer' }}
+                  active={levelInView === level}
                 />
               ))}
             </Stack>
@@ -150,14 +167,7 @@ export default function Courses({ isActiveTab = true }: CoursesProps) {
           style={{ transition: "width 0.3s ease", flex: 1 }}
           ref={boxRef}
         >
-          <ScrollArea h={scrollAreaHeight} px="md">
-            {levelFilter ? (
-              <CourseGrid 
-                courses={filteredCourses} 
-                selectedCourse={selectedCourse} 
-                setSelectedCourse={setSelectedCourse} 
-              />
-            ) : (
+          <ScrollArea h={scrollAreaHeight} viewportRef={viewportRef} px="md">
               <Stack gap="xl">
                 {Object.keys(groupedCourses)
                   .sort((a, b) => parseInt(a) - parseInt(b))
@@ -182,11 +192,12 @@ export default function Courses({ isActiveTab = true }: CoursesProps) {
                         courses={groupedCourses[level]} 
                         selectedCourse={selectedCourse} 
                         setSelectedCourse={setSelectedCourse} 
+                        level={level}
                       />
                     </Box>
                   ))}
               </Stack>
-            )}
+            {/* )} */}
           </ScrollArea>
         </Box>
 
