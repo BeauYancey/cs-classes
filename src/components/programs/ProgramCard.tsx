@@ -1,4 +1,4 @@
-import { Card, Stack, Title } from "@mantine/core";
+import { Card, Stack, Title, useMantineTheme } from "@mantine/core";
 import { Data } from "../Data";
 import type { Program } from "../../types/Program";
 import { ClockIcon, GraduationCapIcon } from "@phosphor-icons/react";
@@ -6,10 +6,12 @@ import type { MouseEventHandler } from "react";
 
 interface ProgramCardProps {
   program: Program;
-  onClick?: MouseEventHandler
+  onClick?: MouseEventHandler;
+  focus?: boolean;
 }
 
-const ProgramCard: React.FC<ProgramCardProps> = ({program, onClick}) => {
+const ProgramCard: React.FC<ProgramCardProps> = ({program, onClick, focus}) => {
+  const theme = useMantineTheme();
 
   return (
     <Card
@@ -18,7 +20,8 @@ const ProgramCard: React.FC<ProgramCardProps> = ({program, onClick}) => {
       radius="md" 
       withBorder 
       onClick={onClick}
-      style={{cursor: "pointer"}}
+      bg={focus ? "rgb(230, 235, 250)" : undefined}
+      style={{cursor: "pointer", transition: 'background-color 0.2s ease'}}
     >
       <Title order={3} mb="sm">{program.name}</Title>
       <Stack gap="0.25rem">

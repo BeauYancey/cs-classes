@@ -127,6 +127,7 @@ const ProgramsPage: React.FC<ProgramsPageProps> = ({isActiveTab}) => {
                       prev?.name === prog.name ? undefined : (prog as Program)
                     )
                   }
+                  focus={selected?.name === prog.name}
                 />
               ))}
             </Stack>
