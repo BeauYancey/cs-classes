@@ -1,4 +1,3 @@
-import formatted_courses from "../../data/formatted_courses.json";
 import extra_course_info from "../../data/extra_course_info.json";
 import CourseGrid from "./CourseGrid";
 import type { Course } from "../../types/Course";
@@ -14,6 +13,7 @@ export default function Courses({ isActiveTab = true }: CoursesProps) {
   const [textFilter, setTextFilter] = useState("");
   const [creditFilter, setCreditFilter] = useState("");
   const [nameFilter, setNameFilter] = useState("");
+  const [outcomesFilter, setOutcomesFilter] = useState("");
   const [selectedCourse, setSelectedCourse] = useState<Course | undefined>();
   const [levelInView, setLevelInView] = useState<string>("100");
 
@@ -60,8 +60,19 @@ export default function Courses({ isActiveTab = true }: CoursesProps) {
       nameFilter === "" ||
       course.name.toLowerCase().includes(nameFilter.toLowerCase()) ||
       course.long_name.toLowerCase().includes(nameFilter.toLowerCase());
+
+    const matchesOutcomes = (() => {
+      if (!outcomesFilter) return true;
+
+      const searchWords = outcomesFilter.trim().toLowerCase().split(/\s+/);
+      return searchWords.every(word => // checks for every search term; change this to searchWords.some to check for one or more search term.
+        course.learningOutcomes.some(outcome => 
+          outcome.name.toLowerCase().includes(word) || outcome.objective.toLowerCase().includes(word)
+        )
+      );
+    })();
     
-    return matchesCode && matchesCredits && matchesName;
+    return matchesCode && matchesCredits && matchesName && matchesOutcomes;
   });
 
   // Group courses by level for display
@@ -139,6 +150,13 @@ export default function Courses({ isActiveTab = true }: CoursesProps) {
           placeholder="e.g., How to Program"
           value={nameFilter}
           onChange={(event) => setNameFilter(event.currentTarget.value)}
+          style={{ flex: 1, maxWidth: 300 }}
+        />
+        <TextInput 
+          label="Search by Learning Outcomes"
+          placeholder="e.g., problem solving"
+          value={outcomesFilter}
+          onChange={(event) => setOutcomesFilter(event.currentTarget.value)} 
           style={{ flex: 1, maxWidth: 300 }}
         />
       </Box>
