@@ -1,4 +1,4 @@
-import { Box, Stack, Text, Title, List } from '@mantine/core';
+import { Box, Stack, Text, Title, List, Anchor, useMantineTheme } from '@mantine/core';
 import type { ProgramRequirement } from '../../types/ProgramRequirement';
 import { CircleIcon } from '@phosphor-icons/react';
 
@@ -9,6 +9,7 @@ interface RequirementBlockProps {
 
 const RequirementBlock: React.FC<RequirementBlockProps> = ({ req, depth = 0 }) => {
   const indent = depth * 12;
+  const theme = useMantineTheme();
 
   return (
     <Box pl={indent}>
@@ -40,9 +41,9 @@ const RequirementBlock: React.FC<RequirementBlockProps> = ({ req, depth = 0 }) =
           <List spacing="xs" size="sm" icon={<CircleIcon weight="fill" size={8} />}>
             {req.courses.map((course) => (
               <List.Item key={course.code}>
-                <Text span fw={500}>
+                <Anchor c={theme.colors.navy[4]} fw={500}>
                   {course.code}
-                </Text>{' '}
+                </Anchor>{' '}
                 — {course.title} ({course.credits} credits)
               </List.Item>
             ))}

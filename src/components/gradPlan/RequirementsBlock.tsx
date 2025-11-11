@@ -1,4 +1,4 @@
-import { Box, Stack, Text, Title, List, Group, useMantineTheme } from '@mantine/core';
+import { Box, Stack, Text, Title, List, Group, useMantineTheme, Anchor } from '@mantine/core';
 import type { CourseSimple, ProgramRequirement } from '../../types/ProgramRequirement';
 import { CheckCircleIcon, CircleIcon, ClockCountdownIcon, MinusCircleIcon } from '@phosphor-icons/react';
 import { getRequirementCredits, isRequirementMet } from '../../utils/gradPlanUtils';
@@ -62,9 +62,9 @@ const RequirementBlock: React.FC<RequirementBlockProps> = ({ req, depth = 0, com
                   />
                 }
               >
-                <Text span fw={500}>
+                <Anchor c={theme.colors.navy[4]} fw={500}>
                   {course.code}
-                </Text>{' '}
+                </Anchor>{' '}
                 — {course.title} ({course.credits} credits)
               </List.Item>
             ))}
