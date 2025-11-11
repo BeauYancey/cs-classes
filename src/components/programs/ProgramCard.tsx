@@ -20,7 +20,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({program, onClick, focus}) => {
       radius="md" 
       withBorder 
       onClick={onClick}
-      bg={focus ? "rgb(230, 235, 250)" : undefined}
+      bg={focus ? theme.colors.royal[1] : undefined}
       style={{cursor: "pointer", transition: 'background-color 0.2s ease'}}
     >
       <Title order={3} mb="sm">{program.name}</Title>

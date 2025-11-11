@@ -1,5 +1,5 @@
 import type { Course } from "../../types/Course";
-import { Card, Title, Group, Divider, Text } from "@mantine/core";
+import { Card, Title, Group, Divider, Text, useMantineTheme } from "@mantine/core";
 
 interface CourseCardProps {
   course: Course;
@@ -8,9 +8,7 @@ interface CourseCardProps {
 }
 
 export default function CourseCard({ course, selectedCourse, setSelectedCourse }: CourseCardProps) {
-  const reqList = Array.isArray(course.requisites)
-    ? course.requisites
-    : [];
+  const theme = useMantineTheme();
   const isSelected = selectedCourse?.course_id === course.course_id;
 
   return (
@@ -23,7 +21,7 @@ export default function CourseCard({ course, selectedCourse, setSelectedCourse }
       onClick={() => setSelectedCourse(isSelected ? undefined : course)}
       style={{ 
         cursor: 'pointer',
-        backgroundColor: isSelected ? 'var(--mantine-color-blue-light)' : undefined,
+        backgroundColor: isSelected ? theme.colors.royal[1] : undefined,
         transition: 'background-color 0.2s ease',
         display: 'flex',
         flexDirection: 'column'

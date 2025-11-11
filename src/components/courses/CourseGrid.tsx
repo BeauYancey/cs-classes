@@ -11,7 +11,7 @@ interface CourseGridProps {
 
 export default function CourseGrid({ courses, selectedCourse, setSelectedCourse, level }: CourseGridProps) {
   return (
-    <Grid gutter="md" pos="relative" id={`level-${level}`}>
+    <Grid gutter="md" pos="relative" id={`level-${level}`} w="calc(100% - var(--mantine-spacing-md))" >
       <div style={{position: "absolute", top: "-39px"}} id={`scroll-${level}`}>{/* This is just here for the scroll to lock onto something */}</div>
       {courses.map((course) => (
         <Grid.Col 

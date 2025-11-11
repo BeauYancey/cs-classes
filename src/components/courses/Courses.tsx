@@ -130,7 +130,7 @@ export default function Courses({ isActiveTab = true }: CoursesProps) {
 
   return (
     <Stack>
-      <Box px="lg" py="sm" style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+      <Box px="lg" style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
         <TextInput
           label="Search by Course Code"
           placeholder="e.g., C S 110"

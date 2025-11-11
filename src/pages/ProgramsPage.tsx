@@ -41,7 +41,6 @@ const ProgramsPage: React.FC<ProgramsPageProps> = ({isActiveTab}) => {
 
   useEffect(() => {
     let result = [...allPrograms] as Program[];
-    console.log(nameFilter)
 
     if (nameFilter) {
       result = result.filter(p => p.name.toLowerCase().includes(nameFilter.toLowerCase()));

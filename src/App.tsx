@@ -31,11 +31,6 @@ function App() {
             <GraduationCapIcon size={22} />
             <Title order={4}>Graduation Plan</Title>
           </Group></Tabs.Tab>
-
-          <Tabs.Tab value="outcomes" bg={activeTab === "outcomes" ? theme.colors.royal[0] : undefined}><Group gap="xs">
-            <TargetIcon size={22} />
-            <Title order={4}>Learning Outcomes</Title>
-          </Group></Tabs.Tab>
         </Tabs.List>
 
         <Tabs.Panel value="courses">
@@ -48,10 +43,6 @@ function App() {
 
         <Tabs.Panel value="grad-plan">
           <GradPlanPage user={testUser as User} />
-        </Tabs.Panel>
-
-        <Tabs.Panel value="outcomes">
-          <Text>Learning Outcomes Page</Text>
         </Tabs.Panel>
       </Tabs>
     </main>
