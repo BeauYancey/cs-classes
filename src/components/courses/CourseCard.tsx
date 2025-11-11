@@ -25,7 +25,9 @@ export default function CourseCard({ course, selectedCourse, setSelectedCourse }
         transition: 'background-color 0.2s ease',
         display: 'flex',
         flexDirection: 'column'
-      }}>
+      }}
+      id={course.id}
+    >
       <Title order={3} my="xs">
         {course.course_id} - {course.name}
       </Title>

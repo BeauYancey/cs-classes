@@ -27,6 +27,10 @@ export default function Courses({ isActiveTab = true }: CoursesProps) {
     if (displayScrollRef.current) {
       displayScrollRef.current.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    if (selectedCourse) {
+      document.getElementById(selectedCourse.id)?.scrollIntoView({block: "nearest", behavior: "smooth"});
+    }
   }, [selectedCourse]);
 
   useEffect(() => {
