@@ -21,23 +21,35 @@ const ProgramsPage: React.FC<ProgramsPageProps> = ({isActiveTab}) => {
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
 
 
-  const boxRef = useRef<HTMLDivElement>(null);
-  const displayScrollRef = useRef<HTMLDivElement>(null);
-  const [scrollAreaHeight, setScrollAreaHeight] = useState<string>("0px");
+  const leftRef = useRef<HTMLDivElement>(null);
+  const rightRef = useRef<HTMLDivElement>(null);
+  const [leftHeight, setLeftHeight] = useState("0px");
+  const [rightHeight, setRightHeight] = useState("0px");
+
 
   useEffect(() => {
     // Scroll to top when new program is selected
-    if (displayScrollRef.current) {
-      displayScrollRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    if (rightRef.current) {
+      rightRef.current.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [selected]);
 
   useEffect(() => {
-    // Set scroll-area height
-    if (isActiveTab) {
-      setScrollAreaHeight(boxRef.current ? `calc(100vh - ${boxRef.current?.getBoundingClientRect().top}px)` : "0px");
+    if (!isActiveTab) return;
+
+    // Left scroll area: subtract the distance from top because filters are above it
+    if (leftRef.current) {
+      const top = leftRef.current.getBoundingClientRect().top;
+      setLeftHeight(`calc(100vh - ${top}px - var(--mantine-spacing-sm))`);
     }
-  }, [boxRef, isActiveTab]);
+
+    // Right scroll area: full screen height, no offset
+    if (rightRef.current) {
+      const top = rightRef.current.getBoundingClientRect().top;
+      setRightHeight(`calc(100vh - ${top}px - var(--mantine-spacing-sm))`);
+    }
+  }, [isActiveTab, selected]);
+
 
   useEffect(() => {
     let result = [...allPrograms] as Program[];
@@ -70,79 +82,79 @@ const ProgramsPage: React.FC<ProgramsPageProps> = ({isActiveTab}) => {
 
   }, [nameFilter, typeFilter, creditFilter, sort, sortDirection])
 
-  return (
-    <Stack>
-      <Group px="lg" justify="space-between">
-        <Group>
-          <TextInput 
-            label="Filter by name" 
-            value={nameFilter} 
-            onChange={(event) => setNameFilter(event.currentTarget.value)}
-          />
-          <Select 
-            label="Filter by type" 
-            data={["Major", "Minor"]} 
-            value={typeFilter} 
-            onChange={(value) => setTypeFilter(value as "Major" | "Minor" | null)}
-          />
-          <TextInput 
-            label="Filter by max credits"  
-            type="number" 
-            value={creditFilter?.toString()}
-            onChange={(event) => setCreditFilter(event.currentTarget.value)}
-          />
-        </Group>
-
-        <Select
-          label="Sort by"
-          data={["Name", "Credits"]}
-          leftSection={
-            sort
-              ? sortDirection === "asc"
-                ? <ArrowUpIcon style={{cursor: "pointer"}} weight="bold" onClick={() => setSortDirection("desc")}/>
-                : <ArrowDownIcon style={{cursor: "pointer"}} weight="bold" onClick={() => setSortDirection("asc")}/>
-              : null
-          }
-          value={sort}
-          onChange={(value) => setSort(value as "Credits" | "Name" | null)}
+  const Filters = (
+    <Group px="lg" justify="space-between" gap="xs">
+      <Group gap="sm" wrap="nowrap">
+        <TextInput 
+          label="Filter by name" 
+          value={nameFilter} 
+          onChange={(event) => setNameFilter(event.currentTarget.value)}
+        />
+        <Select 
+          label="Filter by type" 
+          data={["Major", "Minor"]} 
+          value={typeFilter} 
+          onChange={(value) => setTypeFilter(value as "Major" | "Minor" | null)}
+        />
+        <TextInput 
+          label="Filter by max credits"  
+          type="number" 
+          value={creditFilter?.toString()}
+          onChange={(event) => setCreditFilter(event.currentTarget.value)}
         />
       </Group>
 
-      <Flex w="100%" style={{ transition: "all 0.3s ease" }}>
-        {/* Left pane: Scrollable list */}
-        <Box
-          w={selected ? "40%" : "100%"}
-          style={{ transition: "width 0.3s ease" }}
-          ref={boxRef}
-        >
-          <ScrollArea h={scrollAreaHeight} px="md">
-            <Stack gap="md" mb="sm">
-              {programs.map((prog) => (
-                <ProgramCard
-                  key={prog.name}
-                  program={prog as Program}
-                  onClick={() =>
-                    setSelected((prev) =>
-                      prev?.name === prog.name ? undefined : (prog as Program)
-                    )
-                  }
-                  focus={selected?.name === prog.name}
-                />
-              ))}
-            </Stack>
+      <Select
+        label="Sort by"
+        data={["Name", "Credits"]}
+        leftSection={
+          sort
+            ? sortDirection === "asc"
+              ? <ArrowUpIcon style={{cursor: "pointer"}} weight="bold" onClick={() => setSortDirection("desc")}/>
+              : <ArrowDownIcon style={{cursor: "pointer"}} weight="bold" onClick={() => setSortDirection("asc")}/>
+            : null
+        }
+        value={sort}
+        onChange={(value) => setSort(value as "Credits" | "Name" | null)}
+      />
+    </Group>
+  );
+
+  return (
+    <Flex w="100%" style={{ transition: "all 0.3s ease" }}>
+      {/* Left pane: Scrollable list */}
+      <Box
+        w={selected ? "40%" : "100%"}
+        style={{ transition: "width 0.3s ease" }}
+      >
+        {Filters}
+        <ScrollArea h={leftHeight} px="md" mt="sm" viewportRef={leftRef}>
+          <Stack gap="md" mb="sm">
+            {programs.map((prog) => (
+              <ProgramCard
+                key={prog.name}
+                program={prog as Program}
+                onClick={() =>
+                  setSelected((prev) =>
+                    prev?.name === prog.name ? undefined : (prog as Program)
+                  )
+                }
+                focus={selected?.name === prog.name}
+              />
+            ))}
+          </Stack>
+        </ScrollArea>
+      </Box>
+
+      {/* Right pane: Program detail */}
+      {selected && (
+        <Box w="60%" px="md" bg="white" style={{ overflow: "hidden" }}>
+          <ScrollArea viewportRef={rightRef} h={rightHeight} px="md">
+            <ProgramDisplay program={selected} />
           </ScrollArea>
         </Box>
-
-        {/* Right pane: Program detail */}
-        {selected && (
-          <Box w="60%" px="md" bg="white" style={{ overflowY: "auto" }} mah={scrollAreaHeight}>
-            <ScrollArea viewportRef={displayScrollRef} h={scrollAreaHeight} px="md">
-              <ProgramDisplay program={selected} />
-            </ScrollArea>
-          </Box>
-        )}
-      </Flex>
-    </Stack>
+      )}
+    </Flex>
   );
 };
 
