@@ -1,5 +1,5 @@
 // CourseDisplay.tsx
-import { Stack, Title, Text, Divider, Group, Badge, List } from "@mantine/core";
+import { Stack, Title, Text, Divider, Group, Badge, List, Paper } from "@mantine/core";
 import type { Course } from "../../types/Course";
 
 interface CourseDisplayProps {
@@ -11,7 +11,7 @@ export default function CourseDisplay({ course }: CourseDisplayProps) {
 
   return (
     <Stack gap="md" py="md">
-      <Title order={2}>
+      <Title order={2} c="navy.7">
         {course.course_id} - {course.name}
       </Title>
       
@@ -24,68 +24,75 @@ export default function CourseDisplay({ course }: CourseDisplayProps) {
       <Text size="lg">{course.description}</Text>
 
       <Divider />
-
       <Group>
-        <Badge size="lg" variant="light">Total Credits: {course.total_credits}</Badge>
-        <Badge size="lg" color="blue" variant="light">Lab Hours: {course.lab_hours}</Badge>
-        <Badge size="lg" color="cyan" variant="light">Lecture Hours: {course.lecture_hours}</Badge>
-        <Badge size="lg" color="green" variant="light">Offered: {course.courseTypicallyOffered}</Badge>
+        <Badge size="lg" color="indigo" variant="light">
+          Total Credits: {course.total_credits}
+        </Badge>
+        <Badge size="lg" color="violet" variant="light">
+          Lab Hours: {course.lab_hours}
+        </Badge>
+        <Badge size="lg" color="grape" variant="light">
+          Lecture Hours: {course.lecture_hours}
+        </Badge>
+        <Badge size="lg" color="cyan" variant="light">
+          Offered: {course.courseTypicallyOffered}
+        </Badge>
       </Group>
 
       {course.note && (
         <>
-          <Divider />
-          <div>
-            <Title order={4}>Note</Title>
+          <Divider  />
+          <Paper p="md" radius="md" bg="royal.0" withBorder>
+            <Title order={4} c="navy.7" mb="xs">Note</Title>
             <Text dangerouslySetInnerHTML={{ __html: course.note }} />
-          </div>
+          </Paper>
         </>
       )}
 
       {course.recommended && (
         <>
           <Divider />
-          <div>
-            <Title order={4}>Recommended</Title>
+          <Paper p="md" radius="md" bg="lightBlue.0" withBorder>
+            <Title order={4} c="navy.7" mb="xs">Recommended</Title>
             <Text dangerouslySetInnerHTML={{ __html: course.recommended }} />
-          </div>
+          </Paper>
         </>
       )}
 
       {course.nonEnforcedPrerequisites && (
         <>
           <Divider />
-          <div>
-            <Title order={4}>Non-Enforced Prerequisites</Title>
+          <Paper p="md" radius="md" bg="gray.0" withBorder>
+            <Title order={4} c="navy.7" mb="xs">Non-Enforced Prerequisites</Title>
             <Text dangerouslySetInnerHTML={{ __html: course.nonEnforcedPrerequisites }} />
-          </div>
+          </Paper>
         </>
       )}
 
       {course.requisites && Object.keys(course.requisites).length > 0 && (
         <>
           <Divider />
-          <div>
-            <Title order={4}>Prerequisites</Title>
+          <Paper p="md" radius="md" bg="yellow.0" withBorder style={{ borderColor: 'var(--mantine-color-yellow-3)' }}>
+            <Title order={4} c="navy.7" mb="xs">Prerequisites</Title>
             <Text>{reqList.length > 0 ? reqList.join(', ') : "None"}</Text>
-          </div>
+          </Paper>
         </>
       )}
 
       {course.learningOutcomes && course.learningOutcomes.length > 0 && (
         <>
           <Divider />
-          <div>
-            <Title order={4}>Learning Outcomes</Title>
+          <Paper p="md" radius="md" bg="teal.0" withBorder>
+            <Title order={4} c="navy.7" mb="xs">Learning Outcomes</Title>
             <List spacing="sm" mt="sm">
               {course.learningOutcomes.map((outcome, index) => (
                 <List.Item key={index}>
-                  <Text fw={500}>{outcome.name}</Text>
+                  <Text fw={500} c="teal.8">{outcome.name}</Text>
                   <Text size="sm" c="dimmed">{outcome.objective}</Text>
                 </List.Item>
               ))}
             </List>
-          </div>
+          </Paper>
         </>
       )}
     </Stack>

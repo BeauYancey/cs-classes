@@ -1,5 +1,5 @@
 import type { Course } from "../../types/Course";
-import { Card, Title, Group, Divider, Text, useMantineTheme } from "@mantine/core";
+import { Card, Title, Group, Divider, Text, Badge, useMantineTheme } from "@mantine/core";
 
 interface CourseCardProps {
   course: Course;
@@ -21,14 +21,16 @@ export default function CourseCard({ course, selectedCourse, setSelectedCourse }
       onClick={() => setSelectedCourse(isSelected ? undefined : course)}
       style={{ 
         cursor: 'pointer',
-        backgroundColor: isSelected ? theme.colors.royal[1] : undefined,
-        transition: 'background-color 0.2s ease',
+        backgroundColor: isSelected ? theme.colors.lightBlue[0] : undefined,
+        borderColor: isSelected ? theme.colors.gray[2] : undefined,
+        borderWidth: isSelected ? 2 : 1,
+        transition: 'all 0.2s ease',
         display: 'flex',
         flexDirection: 'column'
       }}
       id={course.id}
     >
-      <Title order={3} my="xs">
+      <Title order={3} my="xs" c="navy.7">
         {course.course_id} - {course.name}
       </Title>
       
